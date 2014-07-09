@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/test.dir/main.cpp.o  -o test -rdynamic -LlibGLEW -lGLU -lGL -lSM -lICE -lX11 -lXext -lglut -lXmu -lXi -Wl,-rpath,libGLEW 
