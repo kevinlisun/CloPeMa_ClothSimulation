@@ -40,9 +40,9 @@ double accumulator = timeStep;
 
 const int total_points = 16;
 
-LARGE_INTEGER frequency;        // ticks per second
-LARGE_INTEGER t1, t2;           // ticks
-double frameTimeQP=0;
+//LARGE_INTEGER frequency;        // ticks per second
+//LARGE_INTEGER t1, t2;           // ticks
+//double frameTimeQP=0;
 float frameTime =0 ;
 
 float startTime =0, fps=0 ;
@@ -147,10 +147,10 @@ void DrawGrid()
 void InitGL() { 
 	startTime = (float)glutGet(GLUT_ELAPSED_TIME);
 	// get ticks per second
-	QueryPerformanceFrequency(&frequency);
+	//QueryPerformanceFrequency(&frequency);
 
 	// start timer
-	QueryPerformanceCounter(&t1);
+	//QueryPerformanceCounter(&t1);
 
 	glEnable(GL_DEPTH_TEST);  
 	glEnable(GL_TEXTURE_2D);
@@ -263,11 +263,11 @@ void OnRender() {
 	//accumulator += frameTime;
 
 	//Using high res. counter
-	QueryPerformanceCounter(&t2);
+	//QueryPerformanceCounter(&t2);
 	// compute and print the elapsed time in millisec
-	frameTimeQP = (t2.QuadPart - t1.QuadPart) * 1000.0 / frequency.QuadPart;
-	t1=t2;
-	accumulator += frameTimeQP;
+	//frameTimeQP = (t2.QuadPart - t1.QuadPart) * 1000.0 / frequency.QuadPart;
+	//t1=t2;
+	//accumulator += frameTimeQP;
 
 	++totalFrames;
 	if((newTime-startTime)>1000)
@@ -278,7 +278,7 @@ void OnRender() {
 		totalFrames=0;
 	}
 
-	sprintf_s(info, "FPS: %3.2f, Frame time (GLUT): %3.4f msecs, Frame time (QP): %3.3f", fps, frameTime, frameTimeQP);
+	sprintf(info, "FPS: %3.2f, Frame time (GLUT): %3.4f msecs", fps, frameTime);
 	glutSetWindowTitle(info);
 
 	glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
@@ -365,7 +365,7 @@ void OnIdle() {
 
  
 
-void main(int argc, char** argv) {
+int main(int argc, char** argv) {
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
@@ -387,4 +387,6 @@ void main(int argc, char** argv) {
 	InitGL();
 
 	glutMainLoop();
+
+	return 0;
 }
