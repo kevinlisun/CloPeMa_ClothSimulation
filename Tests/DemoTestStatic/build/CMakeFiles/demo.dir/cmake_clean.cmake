@@ -1,0 +1,11 @@
+FILE(REMOVE_RECURSE
+  "CMakeFiles/demo.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o"
+  "CMakeFiles/demo.dir/main.cpp.o"
+  "demo.pdb"
+  "demo"
+)
+
+# Per-language clean rules from dependency scanning.
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/demo.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

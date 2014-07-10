@@ -43,11 +43,20 @@ include_directories(/home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rd
 # Include Files
 #########################################################
 include_directories(/home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/tinyObjLoader/)
-add_executable(test main.cpp)
+###add_executable(test main.cpp)
+
+
+file(GLOB demo_SRC
+    "/home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/tinyObjLoader/tiny_obj_loader.cc"
+    "main.cpp"
+)
+
+add_executable(demo ${demo_SRC})
+
 
 ########################################################
 # Linking & stuff
 #########################################################
 
   # create the program "test"
-  target_link_libraries(test ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} GLEW)
+  target_link_libraries(demo ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} GLEW)

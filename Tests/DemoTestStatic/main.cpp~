@@ -54,7 +54,7 @@ using namespace std;
 GLuint textureID;
 std::string mesh_filename = "media/roundTable.obj";
 
-#include "./3rdParty/tinyObjLoader/tiny_obj_loader.h"
+#include <tiny_obj_loader.h>
 
 std::vector<tinyobj::shape_t> tableMesh;
  

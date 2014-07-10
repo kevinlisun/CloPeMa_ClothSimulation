@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/demo.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o CMakeFiles/demo.dir/main.cpp.o  -o demo -rdynamic -LGLEW -lGLU -lGL -lSM -lICE -lX11 -lXext -lglut -lXmu -lXi -lGLEW -Wl,-rpath,GLEW 
