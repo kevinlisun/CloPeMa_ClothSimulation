@@ -172,6 +172,9 @@ HW_OPENGL_BINARY_DIR:STATIC=/home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestSt
 //Value Computed by CMake
 HW_OPENGL_SOURCE_DIR:STATIC=/home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic
 
+//The directory containing a CMake configuration file for OPENGL.
+OPENGL_DIR:PATH=OPENGL_DIR-NOTFOUND
+
 //Path to a file.
 OPENGL_INCLUDE_DIR:PATH=/usr/include
 
