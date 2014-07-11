@@ -1,50 +1,20 @@
 cmake_minimum_required(VERSION 2.8)
+
 # Project Name
 PROJECT(HW_OPENGL)
 
-
-#########################################################
-# FIND GLUT
-#########################################################
-find_package(GLUT REQUIRED)
-include_directories(${GLUT_INCLUDE_DIRS})
-link_directories(${GLUT_LIBRARY_DIRS})
-add_definitions(${GLUT_DEFINITIONS})
-if(NOT GLUT_FOUND)
-    message(ERROR " GLUT not found!")
-endif(NOT GLUT_FOUND)
-#########################################################
-# FIND OPENGL
-#########################################################
 find_package(OpenGL REQUIRED)
-include_directories(${OpenGL_INCLUDE_DIRS})
-link_directories(${OpenGL_LIBRARY_DIRS})
-add_definitions(${OpenGL_DEFINITIONS})
-if(NOT OPENGL_FOUND)
-    message(ERROR " OPENGL not found!")
-endif(NOT OPENGL_FOUND)
-#########################################################
-# FIND GLEW
-#########################################################
-#find_package(libGLEW REQUIRED)
-#include(FindGLEW REQUIRED)
-include_directories(/home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/glew-1.10.0/include/)
-link_directories(libGLEW)
-#add_definitions(${GLEW_DEFINITIONS})
-#if(NOT GLEW_FOUND)
-#    message(ERROR " GLEW not found!")
-#endif(NOT GLEW_FOUND)
+find_package(GLEW REQUIRED)
+find_package(GLUT REQUIRED)
+find_package(GLM) 
 
+find_path(GLM_INCLUDE_DIR glm/glm.hpp) 
 
-#########################################################
-# Include Files
-#########################################################
-include_directories(/home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/tinyObjLoader)
-add_executable(test main.cpp)
+set(TINY_OBJ_DIR 3rdParty/tinyObjLoader)
 
-########################################################
-# Linking & stuff
-#########################################################
+include_directories( ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} ${GLUT_INCLUDE_DIR} ${GLM_INCLUDE_DIR} ${TINY_OBJ_DIR})
 
-  # create the program "test"
-  target_link_libraries(test ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
+add_executable(test main.cpp 3rdParty/tinyObjLoader/tiny_obj_loader.cc)
+
+target_link_libraries(test ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES} ${GLUT_LIBRARY} )
+ 
