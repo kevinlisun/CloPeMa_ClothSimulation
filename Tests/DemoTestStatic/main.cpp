@@ -52,7 +52,7 @@ int totalFrames=0;
 using namespace std;
  
 GLuint textureID;
-std::string mesh_filename = "media/roundTable.obj";
+std::string mesh_filename = "media/roundTable.mtl";
 
 #include <tiny_obj_loader.h>
 

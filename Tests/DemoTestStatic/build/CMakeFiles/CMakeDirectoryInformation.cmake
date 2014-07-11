@@ -11,6 +11,7 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
   "../3rdParty/glew-1.10.0/include"
+  "../3rdParty/glm-0.9.5.3"
   "../3rdParty/tinyObjLoader"
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
