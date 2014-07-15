@@ -99,24 +99,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named demo
+# Target rules for targets named test
 
 # Build rule for target.
-demo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 demo
-.PHONY : demo
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-demo/fast:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/build
-.PHONY : demo/fast
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 3rdParty/tinyObjLoader/tiny_obj_loader.o: 3rdParty/tinyObjLoader/tiny_obj_loader.cc.o
 .PHONY : 3rdParty/tinyObjLoader/tiny_obj_loader.o
 
 # target to build an object file
 3rdParty/tinyObjLoader/tiny_obj_loader.cc.o:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o
 .PHONY : 3rdParty/tinyObjLoader/tiny_obj_loader.cc.o
 
 3rdParty/tinyObjLoader/tiny_obj_loader.i: 3rdParty/tinyObjLoader/tiny_obj_loader.cc.i
@@ -124,7 +124,7 @@ demo/fast:
 
 # target to preprocess a source file
 3rdParty/tinyObjLoader/tiny_obj_loader.cc.i:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.i
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.i
 .PHONY : 3rdParty/tinyObjLoader/tiny_obj_loader.cc.i
 
 3rdParty/tinyObjLoader/tiny_obj_loader.s: 3rdParty/tinyObjLoader/tiny_obj_loader.cc.s
@@ -132,7 +132,7 @@ demo/fast:
 
 # target to generate assembly for a file
 3rdParty/tinyObjLoader/tiny_obj_loader.cc.s:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.s
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.s
 .PHONY : 3rdParty/tinyObjLoader/tiny_obj_loader.cc.s
 
 main.o: main.cpp.o
@@ -140,7 +140,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -148,7 +148,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -156,7 +156,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -165,9 +165,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... demo"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... 3rdParty/tinyObjLoader/tiny_obj_loader.o"
 	@echo "... 3rdParty/tinyObjLoader/tiny_obj_loader.i"
 	@echo "... 3rdParty/tinyObjLoader/tiny_obj_loader.s"

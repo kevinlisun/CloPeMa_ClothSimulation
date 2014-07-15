@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/test.dir/main.cpp.o"
+  "CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o"
   "test.pdb"
   "test"
 )

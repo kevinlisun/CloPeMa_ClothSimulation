@@ -72,20 +72,46 @@ CMakeFiles/test.dir/main.cpp.o.provides: CMakeFiles/test.dir/main.cpp.o.requires
 
 CMakeFiles/test.dir/main.cpp.o.provides.build: CMakeFiles/test.dir/main.cpp.o
 
+CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o: ../3rdParty/tinyObjLoader/tiny_obj_loader.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o -c /home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/tinyObjLoader/tiny_obj_loader.cc
+
+CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/tinyObjLoader/tiny_obj_loader.cc > CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.i
+
+CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/tinyObjLoader/tiny_obj_loader.cc -o CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.s
+
+CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o.requires:
+.PHONY : CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o.requires
+
+CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o.provides: CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o.requires
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o.provides.build
+.PHONY : CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o.provides
+
+CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o.provides.build: CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o
+
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/main.cpp.o"
+"CMakeFiles/test.dir/main.cpp.o" \
+"CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
 test: CMakeFiles/test.dir/main.cpp.o
+test: CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o
 test: /usr/lib/x86_64-linux-gnu/libGLU.so
 test: /usr/lib/x86_64-linux-gnu/libGL.so
 test: /usr/lib/x86_64-linux-gnu/libSM.so
 test: /usr/lib/x86_64-linux-gnu/libICE.so
 test: /usr/lib/x86_64-linux-gnu/libX11.so
 test: /usr/lib/x86_64-linux-gnu/libXext.so
+test: /usr/lib/x86_64-linux-gnu/libGLEW.so
 test: /usr/lib/x86_64-linux-gnu/libglut.so
 test: /usr/lib/x86_64-linux-gnu/libXmu.so
 test: /usr/lib/x86_64-linux-gnu/libXi.so
@@ -99,6 +125,7 @@ CMakeFiles/test.dir/build: test
 .PHONY : CMakeFiles/test.dir/build
 
 CMakeFiles/test.dir/requires: CMakeFiles/test.dir/main.cpp.o.requires
+CMakeFiles/test.dir/requires: CMakeFiles/test.dir/3rdParty/tinyObjLoader/tiny_obj_loader.cc.o.requires
 .PHONY : CMakeFiles/test.dir/requires
 
 CMakeFiles/test.dir/clean:
