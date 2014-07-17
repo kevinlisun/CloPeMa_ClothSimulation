@@ -1,0 +1,478 @@
+# depslib dependency file v1.0
+1405427006 source:/home/mobeen/codes/codeblocks/ObjTest/tiny_obj_loader.cc
+	<cstdlib>
+	<cstring>
+	<cassert>
+	<string>
+	<vector>
+	<map>
+	<fstream>
+	<sstream>
+	"tiny_obj_loader.h"
+
+1405427006 /home/mobeen/codes/codeblocks/ObjTest/tiny_obj_loader.h
+	<string>
+	<vector>
+	<map>
+
+1405657171 source:/home/mobeen/codes/codeblocks/ObjTest/main.cpp
+	<iostream>
+	<cmath>
+	<GL/freeglut.h>
+	<vector>
+	<glm/glm.hpp>
+	"tiny_obj_loader.h"
+	<sstream>
+
+1388645418 /usr/include/GL/glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1397298922 /usr/include/inttypes.h
+	<features.h>
+	<stdint.h>
+	<stddef.h>
+
+1397298905 /usr/include/features.h
+	<stdc-predef.h>
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1397298905 /usr/include/stdc-predef.h
+
+1397298922 /usr/include/stdint.h
+	<features.h>
+	<bits/wchar.h>
+	<bits/wordsize.h>
+
+1382363599 /usr/include/GL/glu.h
+	"glu_mangle.h"
+	<GL/gl.h>
+
+1382363599 /usr/include/GL/glu_mangle.h
+
+1400146851 /usr/include/GL/gl.h
+	"gl_mangle.h"
+	<windows.h>
+	<GL/glext.h>
+
+1400146851 /usr/include/GL/gl_mangle.h
+
+1400146851 /usr/include/GL/glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1370385653 /usr/include/GL/freeglut.h
+	"freeglut_std.h"
+	"freeglut_ext.h"
+
+1370385653 /usr/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1397298922 /usr/include/stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib-bsearch.h>
+	<bits/stdlib-float.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1397298906 /usr/include/xlocale.h
+
+1397298922 /usr/include/alloca.h
+	<features.h>
+	<stddef.h>
+
+1370385653 /usr/include/GL/freeglut_ext.h
+	<stdarg.h>
+
+1388871062 /usr/include/glm/glm.hpp
+	"detail/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cassert>
+	"fwd.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"trigonometric.hpp"
+	"exponential.hpp"
+	"common.hpp"
+	"packing.hpp"
+	"geometric.hpp"
+	"matrix.hpp"
+	"vector_relational.hpp"
+	"integer.hpp"
+
+1388871056 /usr/include/glm/detail/_fixes.hpp
+	<cmath>
+
+1388871058 /usr/include/glm/fwd.hpp
+	"detail/type_int.hpp"
+	"detail/type_float.hpp"
+	"detail/type_vec.hpp"
+	"detail/type_mat.hpp"
+
+1388871056 /usr/include/glm/detail/type_int.hpp
+	"setup.hpp"
+	<cstdint>
+
+1388871056 /usr/include/glm/detail/setup.hpp
+	<cassert>
+	<intrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<smmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+
+1388871056 /usr/include/glm/detail/type_float.hpp
+	"setup.hpp"
+
+1388871062 /usr/include/glm/detail/type_vec.hpp
+	"precision.hpp"
+	"type_int.hpp"
+
+1388965600 /usr/include/glm/detail/precision.hpp
+
+1389474366 /usr/include/glm/detail/type_mat.hpp
+	"precision.hpp"
+
+1388871058 /usr/include/glm/vec2.hpp
+	"detail/type_vec2.hpp"
+
+1388871062 /usr/include/glm/detail/type_vec2.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<initializer_list>
+	<cstddef>
+	"type_vec2.inl"
+
+1388871056 /usr/include/glm/detail/_swizzle.hpp
+
+1388871056 /usr/include/glm/detail/_swizzle_func.hpp
+
+1388871062 /usr/include/glm/detail/type_vec2.inl
+
+1388871058 /usr/include/glm/vec3.hpp
+	"detail/type_vec3.hpp"
+
+1388871062 /usr/include/glm/detail/type_vec3.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<initializer_list>
+	<cstddef>
+	"type_vec3.inl"
+
+1388871056 /usr/include/glm/detail/type_vec3.inl
+
+1388871058 /usr/include/glm/vec4.hpp
+	"detail/type_vec4.hpp"
+
+1388871062 /usr/include/glm/detail/type_vec4.hpp
+	"setup.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<initializer_list>
+	<cstddef>
+	"type_vec4.inl"
+
+1388871062 /usr/include/glm/detail/type_vec4.inl
+
+1389471568 /usr/include/glm/mat2x2.hpp
+	"detail/type_mat2x2.hpp"
+
+1389471536 /usr/include/glm/detail/type_mat2x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_mat.hpp"
+	<limits>
+	"type_mat2x2.inl"
+
+1389478982 /usr/include/glm/detail/type_mat2x2.inl
+
+1389471780 /usr/include/glm/mat2x3.hpp
+	"detail/type_mat2x3.hpp"
+
+1388871056 /usr/include/glm/detail/type_mat2x3.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	"type_mat2x3.inl"
+
+1388871062 /usr/include/glm/detail/type_mat2x3.inl
+
+1389471820 /usr/include/glm/mat2x4.hpp
+	"detail/type_mat2x4.hpp"
+
+1388871056 /usr/include/glm/detail/type_mat2x4.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	"type_mat2x4.inl"
+
+1388871062 /usr/include/glm/detail/type_mat2x4.inl
+
+1389471844 /usr/include/glm/mat3x2.hpp
+	"detail/type_mat3x2.hpp"
+
+1388871056 /usr/include/glm/detail/type_mat3x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	"type_mat3x2.inl"
+
+1388871056 /usr/include/glm/detail/type_mat3x2.inl
+
+1389471874 /usr/include/glm/mat3x3.hpp
+	"detail/type_mat3x3.hpp"
+
+1388871062 /usr/include/glm/detail/type_mat3x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	"type_mat3x3.inl"
+
+1389466686 /usr/include/glm/detail/type_mat3x3.inl
+
+1389471910 /usr/include/glm/mat3x4.hpp
+	"detail/type_mat3x4.hpp"
+
+1388871056 /usr/include/glm/detail/type_mat3x4.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	"type_mat3x4.inl"
+
+1388871056 /usr/include/glm/detail/type_mat3x4.inl
+
+1389471966 /usr/include/glm/mat4x2.hpp
+	"detail/type_mat4x2.hpp"
+
+1388871056 /usr/include/glm/detail/type_mat4x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	"type_mat4x2.inl"
+
+1388871056 /usr/include/glm/detail/type_mat4x2.inl
+
+1389471996 /usr/include/glm/mat4x3.hpp
+	"detail/type_mat4x3.hpp"
+
+1388871056 /usr/include/glm/detail/type_mat4x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	"type_mat4x3.inl"
+
+1388871056 /usr/include/glm/detail/type_mat4x3.inl
+
+1389472030 /usr/include/glm/mat4x4.hpp
+	"detail/type_mat4x4.hpp"
+
+1388871062 /usr/include/glm/detail/type_mat4x4.hpp
+	"../fwd.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<initializer_list>
+	<limits>
+	<cstddef>
+	"type_mat4x4.inl"
+
+1389465780 /usr/include/glm/detail/type_mat4x4.inl
+
+1388871058 /usr/include/glm/trigonometric.hpp
+	"detail/func_trigonometric.hpp"
+
+1388871056 /usr/include/glm/detail/func_trigonometric.hpp
+	"func_trigonometric.inl"
+
+1388871056 /usr/include/glm/detail/func_trigonometric.inl
+	"_vectorize.hpp"
+	<cmath>
+	<limits>
+
+1388871056 /usr/include/glm/detail/_vectorize.hpp
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+
+1388871058 /usr/include/glm/exponential.hpp
+	"detail/func_exponential.hpp"
+
+1388871056 /usr/include/glm/detail/func_exponential.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<cmath>
+	"func_exponential.inl"
+
+1389462558 /usr/include/glm/detail/type_vec1.hpp
+	"../fwd.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<initializer_list>
+	<cstddef>
+	"type_vec1.inl"
+
+1388871062 /usr/include/glm/detail/type_vec1.inl
+
+1388871062 /usr/include/glm/detail/func_exponential.inl
+	"func_vector_relational.hpp"
+	"_vectorize.hpp"
+	<limits>
+	<cassert>
+
+1388871056 /usr/include/glm/detail/func_vector_relational.hpp
+	"precision.hpp"
+	"setup.hpp"
+	"func_vector_relational.inl"
+
+1388871062 /usr/include/glm/detail/func_vector_relational.inl
+	<limits>
+
+1388871058 /usr/include/glm/common.hpp
+	"detail/func_common.hpp"
+
+1388871062 /usr/include/glm/detail/func_common.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"type_int.hpp"
+	"_fixes.hpp"
+	"func_common.inl"
+
+1388871062 /usr/include/glm/detail/func_common.inl
+	"func_vector_relational.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"_vectorize.hpp"
+	<limits>
+
+1388871058 /usr/include/glm/packing.hpp
+	"detail/func_packing.hpp"
+
+1388871056 /usr/include/glm/detail/func_packing.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"func_packing.inl"
+
+1388871056 /usr/include/glm/detail/func_packing.inl
+	"func_common.hpp"
+	"type_half.hpp"
+	"../fwd.hpp"
+
+1388871056 /usr/include/glm/detail/type_half.hpp
+	"setup.hpp"
+	"type_half.inl"
+
+1388871056 /usr/include/glm/detail/type_half.inl
+
+1388871058 /usr/include/glm/geometric.hpp
+	"detail/func_geometric.hpp"
+
+1388871056 /usr/include/glm/detail/func_geometric.hpp
+	"type_vec3.hpp"
+	"func_geometric.inl"
+
+1389462480 /usr/include/glm/detail/func_geometric.inl
+	"func_exponential.hpp"
+	"func_common.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_float.hpp"
+
+1388871062 /usr/include/glm/matrix.hpp
+	"detail/func_matrix.hpp"
+
+1389474450 /usr/include/glm/detail/func_matrix.hpp
+	"../detail/precision.hpp"
+	"../detail/setup.hpp"
+	"../detail/type_mat.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../mat2x2.hpp"
+	"../mat2x3.hpp"
+	"../mat2x4.hpp"
+	"../mat3x2.hpp"
+	"../mat3x3.hpp"
+	"../mat3x4.hpp"
+	"../mat4x2.hpp"
+	"../mat4x3.hpp"
+	"../mat4x4.hpp"
+	"func_matrix.inl"
+
+1389474662 /usr/include/glm/detail/func_matrix.inl
+	"../geometric.hpp"
+	<limits>
+
+1388871058 /usr/include/glm/vector_relational.hpp
+	"detail/func_vector_relational.hpp"
+
+1388871058 /usr/include/glm/integer.hpp
+	"detail/func_integer.hpp"
+
+1388871056 /usr/include/glm/detail/func_integer.hpp
+	"setup.hpp"
+	"func_integer.inl"
+
+1388871056 /usr/include/glm/detail/func_integer.inl
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_int.hpp"
+	"_vectorize.hpp"
+	<intrin.h>
+	<limits>
+
