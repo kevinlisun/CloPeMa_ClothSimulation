@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/test.dir/main.cxx.o  -o test -rdynamic -lGLU -lGL -lSM -lICE -lX11 -lXext -lGLEW -lglut -lXmu -lXi -l../../../../../Libraries/PhysXSDK_3.3/Lib/linux64/ -l../../../../../Libraries/PhysXSDK_3.3/Include/foundation/ 
