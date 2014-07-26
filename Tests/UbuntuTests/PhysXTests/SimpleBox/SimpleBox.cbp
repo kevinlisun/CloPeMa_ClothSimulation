@@ -34,12 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-DNDEBUG" />
 			<Add directory="$(#freeglut.include)" />
-			<Add directory="../../../../Libraries/PhysXSDK_3.3/SDKs/PhysXAPI" />
-			<Add directory="../../../../Libraries/PhysXSDK_3.3/Include/extensions" />
-			<Add directory="../../../../Libraries/PhysXSDK_3.3/Include/foundation" />
-			<Add directory="../../../../Libraries/PhysXSDK_3.3/pxtask/include" />
-			<Add directory="../../../../Libraries/PhysXSDK_3.3/SDKs/PhysXAPI/deprecated" />
-			<Add directory="../../../../Libraries/PhysXSDK_3.3/Include" />
+			<Add directory="../../../../../Libraries/PhysXSDK_3.3/SDKs/PhysXAPI" />
+			<Add directory="../../../../../Libraries/PhysXSDK_3.3/Include/extensions" />
+			<Add directory="../../../../../Libraries/PhysXSDK_3.3/Include/foundation" />
+			<Add directory="../../../../../Libraries/PhysXSDK_3.3/pxtask/include" />
+			<Add directory="../../../../../Libraries/PhysXSDK_3.3/SDKs/PhysXAPI/deprecated" />
+			<Add directory="../../../../../Libraries/PhysXSDK_3.3/Include" />
 		</Compiler>
 		<Linker>
 			<Add option="-lPhysX3" />
@@ -72,7 +72,7 @@
 			<Add library="rt" />
 			<Add library="pthread" />
 			<Add directory="$(#freeglut.lib)" />
-			<Add directory="../../../../Libraries/PhysXSDK_3.3/Lib/linux64" />
+			<Add directory="../../../../../Libraries/PhysXSDK_3.3/Lib/linux64" />
 		</Linker>
 		<Unit filename="main.cxx" />
 		<Extensions>

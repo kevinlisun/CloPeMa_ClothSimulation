@@ -1391,3 +1391,1228 @@
 	<PxMat33.h>
 	<PxSimpleFactory.h>
 
+1406392840 source:/home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/PhysXTests/SimpleBox/main.cxx
+	<iostream>
+	<cstdio>
+	<GL/freeglut.h>
+	<PxPhysicsAPI.h>
+	<PxExtensionsAPI.h>
+	<PxDefaultErrorCallback.h>
+	<PxDefaultAllocator.h>
+	<PxDefaultSimulationFilterShader.h>
+	<PxDefaultCpuDispatcher.h>
+	<PxShapeExt.h>
+	<PxMat33.h>
+	<PxSimpleFactory.h>
+
+1406392840 /home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/freeglut-2.8.1/include/GL/freeglut.h
+	"freeglut_std.h"
+	"freeglut_ext.h"
+
+1406392840 /home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/freeglut-2.8.1/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1406392840 /home/kevin/CloPeMa_ClothSimulation/Tests/DemoTestStatic/3rdParty/freeglut-2.8.1/include/GL/freeglut_ext.h
+	<stdarg.h>
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxPhysicsAPI.h
+	"foundation/Px.h"
+	"foundation/PxAllocatorCallback.h"
+	"foundation/PxAssert.h"
+	"foundation/PxBitAndData.h"
+	"foundation/PxBounds3.h"
+	"foundation/PxBroadcastingAllocator.h"
+	"foundation/PxErrorCallback.h"
+	"foundation/PxErrors.h"
+	"foundation/PxFlags.h"
+	"foundation/PxFoundation.h"
+	"foundation/PxIntrinsics.h"
+	"foundation/PxIO.h"
+	"foundation/PxMat33.h"
+	"foundation/PxMat44.h"
+	"foundation/PxMath.h"
+	"foundation/PxPlane.h"
+	"foundation/PxPreprocessor.h"
+	"foundation/PxQuat.h"
+	"foundation/PxSimpleTypes.h"
+	"foundation/PxStrideIterator.h"
+	"foundation/PxString.h"
+	"foundation/PxTransform.h"
+	"foundation/PxUnionCast.h"
+	"foundation/PxVec2.h"
+	"foundation/PxVec3.h"
+	"foundation/PxVec4.h"
+	"foundation/PxVersionNumber.h"
+	"common/PxCoreUtilityTypes.h"
+	"common/PxMathUtils.h"
+	"common/PxPhysXCommonConfig.h"
+	"common/PxRenderBuffer.h"
+	"common/PxBase.h"
+	"common/PxTolerancesScale.h"
+	"common/PxTypeInfo.h"
+	"common/PxStringTable.h"
+	"common/PxSerializer.h"
+	"common/PxMetaData.h"
+	"common/PxMetaDataFlags.h"
+	"common/PxSerialFramework.h"
+	"common/PxPhysicsInsertionCallback.h"
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileCompileTimeEventFilter.h"
+	"physxprofilesdk/PxProfileContextProvider.h"
+	"physxprofilesdk/PxProfileEventBufferClient.h"
+	"physxprofilesdk/PxProfileEventBufferClientManager.h"
+	"physxprofilesdk/PxProfileEventFilter.h"
+	"physxprofilesdk/PxProfileEventHandler.h"
+	"physxprofilesdk/PxProfileEventId.h"
+	"physxprofilesdk/PxProfileEventMutex.h"
+	"physxprofilesdk/PxProfileEventNames.h"
+	"physxprofilesdk/PxProfileEvents.h"
+	"physxprofilesdk/PxProfileEventSender.h"
+	"physxprofilesdk/PxProfileEventSystem.h"
+	"physxprofilesdk/PxProfileMemoryEventTypes.h"
+	"physxprofilesdk/PxProfileScopedEvent.h"
+	"physxprofilesdk/PxProfileZone.h"
+	"physxprofilesdk/PxProfileZoneManager.h"
+	"physxvisualdebuggersdk/PvdBits.h"
+	"physxvisualdebuggersdk/PvdConnection.h"
+	"physxvisualdebuggersdk/PvdConnectionFlags.h"
+	"physxvisualdebuggersdk/PvdConnectionManager.h"
+	"physxvisualdebuggersdk/PvdDataStream.h"
+	"physxvisualdebuggersdk/PvdDataStreamHelpers.h"
+	"physxvisualdebuggersdk/PvdErrorCodes.h"
+	"physxvisualdebuggersdk/PvdImmediateRenderer.h"
+	"physxvisualdebuggersdk/PvdNetworkStreams.h"
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypeDefs.h"
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+	"physxvisualdebuggersdk/PvdObjectModelMetaData.h"
+	"physxvisualdebuggersdk/PvdSimpleErrorStream.h"
+	"pvd/PxVisualDebugger.h"
+	"pxtask/PxCpuDispatcher.h"
+	"pxtask/PxCudaContextManager.h"
+	"pxtask/PxCudaMemoryManager.h"
+	"pxtask/PxGpuCopyDesc.h"
+	"pxtask/PxGpuCopyDescQueue.h"
+	"pxtask/PxGpuDispatcher.h"
+	"pxtask/PxGpuTask.h"
+	"pxtask/PxSpuDispatcher.h"
+	"pxtask/PxSpuTask.h"
+	"pxtask/PxTask.h"
+	"pxtask/PxTaskManager.h"
+	"geometry/PxBoxGeometry.h"
+	"geometry/PxCapsuleGeometry.h"
+	"geometry/PxConvexMesh.h"
+	"geometry/PxConvexMeshGeometry.h"
+	"geometry/PxGeometry.h"
+	"geometry/PxGeometryHelpers.h"
+	"geometry/PxGeometryQuery.h"
+	"geometry/PxHeightField.h"
+	"geometry/PxHeightFieldDesc.h"
+	"geometry/PxHeightFieldFlag.h"
+	"geometry/PxHeightFieldGeometry.h"
+	"geometry/PxHeightFieldSample.h"
+	"geometry/PxMeshQuery.h"
+	"geometry/PxMeshScale.h"
+	"geometry/PxPlaneGeometry.h"
+	"geometry/PxSimpleTriangleMesh.h"
+	"geometry/PxSphereGeometry.h"
+	"geometry/PxTriangle.h"
+	"geometry/PxTriangleMesh.h"
+	"geometry/PxTriangleMeshGeometry.h"
+	"PxActor.h"
+	"PxAggregate.h"
+	"PxArticulation.h"
+	"PxArticulationJoint.h"
+	"PxArticulationLink.h"
+	"PxBatchQuery.h"
+	"PxBatchQueryDesc.h"
+	"PxClient.h"
+	"PxConstraint.h"
+	"PxConstraintDesc.h"
+	"PxContact.h"
+	"PxContactModifyCallback.h"
+	"PxDeletionListener.h"
+	"PxFiltering.h"
+	"PxForceMode.h"
+	"PxLockedData.h"
+	"PxMaterial.h"
+	"PxPhysics.h"
+	"PxPhysXConfig.h"
+	"PxQueryFiltering.h"
+	"PxQueryReport.h"
+	"PxRigidActor.h"
+	"PxRigidBody.h"
+	"PxRigidDynamic.h"
+	"PxRigidStatic.h"
+	"PxScene.h"
+	"PxSceneDesc.h"
+	"PxSceneLock.h"
+	"PxShape.h"
+	"PxSimulationEventCallback.h"
+	"PxSimulationStatistics.h"
+	"PxSpatialIndex.h"
+	"PxVisualizationParameter.h"
+	"PxVolumeCache.h"
+	"characterkinematic/PxBoxController.h"
+	"characterkinematic/PxCapsuleController.h"
+	"characterkinematic/PxCharacter.h"
+	"characterkinematic/PxController.h"
+	"characterkinematic/PxControllerBehavior.h"
+	"characterkinematic/PxControllerManager.h"
+	"characterkinematic/PxControllerObstacles.h"
+	"characterkinematic/PxExtended.h"
+	"cloth/PxCloth.h"
+	"cloth/PxClothCollisionData.h"
+	"cloth/PxClothFabric.h"
+	"cloth/PxClothParticleData.h"
+	"cloth/PxClothTypes.h"
+	"cooking/Pxc.h"
+	"cooking/PxConvexMeshDesc.h"
+	"cooking/PxCooking.h"
+	"cooking/PxGaussMapLimit.h"
+	"cooking/PxTriangleMeshDesc.h"
+	"extensions/PxDefaultStreams.h"
+	"extensions/PxDistanceJoint.h"
+	"extensions/PxExtensionsAPI.h"
+	"extensions/PxFixedJoint.h"
+	"extensions/PxJoint.h"
+	"extensions/PxJointLimit.h"
+	"extensions/PxParticleExt.h"
+	"extensions/PxPrismaticJoint.h"
+	"extensions/PxRevoluteJoint.h"
+	"extensions/PxRigidBodyExt.h"
+	"extensions/PxShapeExt.h"
+	"extensions/PxSimpleFactory.h"
+	"extensions/PxSmoothNormals.h"
+	"extensions/PxSphericalJoint.h"
+	"extensions/PxStringTableExt.h"
+	"extensions/PxTriangleMeshExt.h"
+	"extensions/PxVisualDebuggerExt.h"
+	"extensions/PxSerialization.h"
+	"extensions/PxBinaryConverter.h"
+	"extensions/PxRepXSerializer.h"
+	"extensions/PxJointRepXSerializer.h"
+	"particles/PxParticleBase.h"
+	"particles/PxParticleBaseFlag.h"
+	"particles/PxParticleCreationData.h"
+	"particles/PxParticleFlag.h"
+	"particles/PxParticleFluid.h"
+	"particles/PxParticleFluidReadData.h"
+	"particles/PxParticleReadData.h"
+	"particles/PxParticleSystem.h"
+	"vehicle/PxVehicleComponents.h"
+	"vehicle/PxVehicleDrive.h"
+	"vehicle/PxVehicleDrive4W.h"
+	"vehicle/PxVehicleDriveTank.h"
+	"vehicle/PxVehicleSDK.h"
+	"vehicle/PxVehicleShaders.h"
+	"vehicle/PxVehicleTireFriction.h"
+	"vehicle/PxVehicleUpdate.h"
+	"vehicle/PxVehicleUtilControl.h"
+	"vehicle/PxVehicleUtilSetup.h"
+	"vehicle/PxVehicleUtilTelemetry.h"
+	"vehicle/PxVehicleWheels.h"
+	"vehicle/PxVehicleNoDrive.h"
+	"vehicle/PxVehicleDriveNW.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/Px.h
+	"foundation/PxVersionNumber.h"
+	"foundation/PxSimpleTypes.h"
+	<string.h>
+	<stdlib.h>
+	<stdint.h>
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxVersionNumber.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxSimpleTypes.h
+	"foundation/PxPreprocessor.h"
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxPreprocessor.h
+	<stddef.h>
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxAllocatorCallback.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxAssert.h
+	"foundation/Px.h"
+	"ps3/PxPS3Assert.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxBitAndData.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxBounds3.h
+	"foundation/PxTransform.h"
+	"foundation/PxMat33.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxTransform.h
+	"foundation/PxQuat.h"
+	"foundation/PxPlane.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxQuat.h
+	"foundation/PxVec3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxVec3.h
+	"foundation/PxMath.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxMath.h
+	"foundation/PxPreprocessor.h"
+	<math.h>
+	<float.h>
+	"foundation/PxIntrinsics.h"
+	"foundation/PxAssert.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxIntrinsics.h
+	"foundation/PxPreprocessor.h"
+	"foundation/windows/PxWindowsIntrinsics.h"
+	"foundation/xbox360/PxXbox360Intrinsics.h"
+	"foundation/unix/PxUnixIntrinsics.h"
+	"foundation/ps3/PxPS3Intrinsics.h"
+	"foundation/psp2/PxPSP2Intrinsics.h"
+	"foundation/wiiu/PxWiiUIntrinsics.h"
+	"foundation/XboxOne/PxXboxOneIntrinsics.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/unix/PxUnixIntrinsics.h
+	"foundation/Px.h"
+	"foundation/PxAssert.h"
+	<math.h>
+	<float.h>
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxPlane.h
+	"foundation/PxMath.h"
+	"foundation/PxVec3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxMat33.h
+	"foundation/PxVec3.h"
+	"foundation/PxQuat.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxBroadcastingAllocator.h
+	"foundation/PxAllocatorCallback.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxErrorCallback.h
+	"foundation/PxErrors.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxErrors.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxFlags.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxFoundation.h
+	"foundation/PxVersionNumber.h"
+	"foundation/PxErrors.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxIO.h
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxPhysXCommonConfig.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxMat44.h
+	"foundation/PxQuat.h"
+	"foundation/PxVec4.h"
+	"foundation/PxMat33.h"
+	"foundation/PxTransform.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxVec4.h
+	"foundation/PxMath.h"
+	"foundation/PxVec3.h"
+	"foundation/PxAssert.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxStrideIterator.h
+	"foundation/PxAssert.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxString.h
+	"foundation/PxPreprocessor.h"
+	"foundation/windows/PxWindowsString.h"
+	"foundation/xbox360/PxXbox360String.h"
+	"foundation/unix/PxUnixString.h"
+	"foundation/ps3/PxPS3String.h"
+	"foundation/psp2/PxPSP2String.h"
+	"foundation/wiiu/PxWiiUString.h"
+	"foundation/XboxOne/PxXboxOneString.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/unix/PxUnixString.h
+	"foundation/Px.h"
+	<stdio.h>
+	<string.h>
+	<stdarg.h>
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxUnionCast.h
+	"foundation/PxPreprocessor.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxVec2.h
+	"foundation/PxMath.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxCoreUtilityTypes.h
+	"foundation/PxAssert.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxMathUtils.h
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxTransform.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxRenderBuffer.h
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxVec3.h"
+	"foundation/PxMat33.h"
+	"foundation/PxBounds3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxBase.h
+	"PxSerialFramework.h"
+	"PxCollection.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxSerialFramework.h
+	"common/PxPhysXCommonConfig.h"
+	"common/PxTypeInfo.h"
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxTypeInfo.h
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxCollection.h
+	"PxSerialFramework.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxTolerancesScale.h
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxStringTable.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxSerializer.h
+	"PxSerialFramework.h"
+	"PxCollection.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxMetaData.h
+	"foundation/Px.h"
+	"PxMetaDataFlags.h"
+	"foundation/PxIO.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxMetaDataFlags.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/common/PxPhysicsInsertionCallback.h
+	"PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileBase.h
+	"foundation/PxSimpleTypes.h"
+	"foundation/PxAssert.h"
+	"foundation/PxMath.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileCompileTimeEventFilter.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileEventId.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventId.h
+	"physxprofilesdk/PxProfileBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileContextProvider.h
+	"physxprofilesdk/PxProfileBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventBufferClient.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileEventNames.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventNames.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileEventId.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventBufferClientManager.h
+	"physxprofilesdk/PxProfileEventBufferClient.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventFilter.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileEventId.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventHandler.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileEventId.h"
+	"physxprofilesdk/PxProfileEvents.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEvents.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileEventId.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventMutex.h
+	"physxprofilesdk/PxProfileBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventSender.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileContextProvider.h"
+	"physxprofilesdk/PxProfileEventId.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileEventSystem.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileEventSender.h"
+	"physxprofilesdk/PxProfileEventBufferClient.h"
+	"physxprofilesdk/PxProfileEventBufferClientManager.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileMemoryEventTypes.h
+	"physxprofilesdk/PxProfileBase.h"
+	"foundation/PxBroadcastingAllocator.h"
+	"physxprofilesdk/PxProfileEventBufferClientManager.h"
+	"physxprofilesdk/PxProfileEventSender.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileScopedEvent.h
+	"physxprofilesdk/PxProfileBase.h"
+	"physxprofilesdk/PxProfileEventId.h"
+	"physxprofilesdk/PxProfileCompileTimeEventFilter.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileZone.h
+	"physxprofilesdk/PxProfileEventBufferClientManager.h"
+	"physxprofilesdk/PxProfileEventNames.h"
+	"physxprofilesdk/PxProfileEventFilter.h"
+	"physxprofilesdk/PxProfileEventSender.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxprofilesdk/PxProfileZoneManager.h
+	"physxprofilesdk/PxProfileEventSender.h"
+	"physxprofilesdk/PxProfileEventNames.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdBits.h
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdObjectModelBaseTypes.h
+	"foundation/PxSimpleTypes.h"
+	"foundation/PxAssert.h"
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypeDefs.h"
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypeDefs.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdObjectModelBaseTypeDefs.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdConnection.h
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+	"physxvisualdebuggersdk/PvdConnectionFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdConnectionFlags.h
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdConnectionManager.h
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+	"physxvisualdebuggersdk/PvdConnectionFlags.h"
+	"physxvisualdebuggersdk/PvdNetworkStreams.h"
+	"physxvisualdebuggersdk/PvdConnection.h"
+	"foundation/PxErrors.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdNetworkStreams.h
+	"foundation/PxSimpleTypes.h"
+	"physxvisualdebuggersdk/PvdErrorCodes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdErrorCodes.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdDataStream.h
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+	"physxvisualdebuggersdk/PvdErrorCodes.h"
+	"physxvisualdebuggersdk/PvdObjectModelMetaData.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdObjectModelMetaData.h
+	"foundation/PxSimpleTypes.h"
+	"foundation/PxAssert.h"
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+	"physxvisualdebuggersdk/PvdBits.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdDataStreamHelpers.h
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdImmediateRenderer.h
+	"physxvisualdebuggersdk/PvdObjectModelBaseTypes.h"
+	"physxprofilesdk/PxProfileEventBufferClientManager.h"
+	"foundation/PxVec3.h"
+	"foundation/PxTransform.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/physxvisualdebuggersdk/PvdSimpleErrorStream.h
+	"foundation/PxErrorCallback.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pvd/PxVisualDebugger.h
+	"foundation/PxSimpleTypes.h"
+	"foundation/PxVec3.h"
+	"foundation/PxTransform.h"
+	"foundation/PxErrors.h"
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxCpuDispatcher.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxCudaContextManager.h
+	"pxtask/PxCudaMemoryManager.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxCudaMemoryManager.h
+	"foundation/PxSimpleTypes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxGpuCopyDesc.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxGpuCopyDescQueue.h
+	"foundation/PxAssert.h"
+	"pxtask/PxGpuCopyDesc.h"
+	"pxtask/PxGpuDispatcher.h"
+	"pxtask/PxCudaContextManager.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxGpuDispatcher.h
+	"pxtask/PxTask.h"
+	"pxtask/PxGpuCopyDesc.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxTask.h
+	"foundation/Px.h"
+	"pxtask/PxTaskManager.h"
+	"foundation/PxAssert.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxTaskManager.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxGpuTask.h
+	"pxtask/PxTask.h"
+	"pxtask/PxGpuDispatcher.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxSpuDispatcher.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/pxtask/PxSpuTask.h
+	"pxtask/PxTask.h"
+	"pxtask/PxSpuDispatcher.h"
+	"physxprofilesdk/PxProfileZone.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxBoxGeometry.h
+	"geometry/PxGeometry.h"
+	"foundation/PxVec3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxGeometry.h
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxFlags.h"
+	"foundation/PxMath.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxCapsuleGeometry.h
+	"geometry/PxGeometry.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxConvexMesh.h
+	"foundation/Px.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxConvexMeshGeometry.h
+	"geometry/PxGeometry.h"
+	"geometry/PxMeshScale.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxMeshScale.h
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxMat33.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxGeometryHelpers.h
+	"common/PxPhysXCommonConfig.h"
+	"PxGeometry.h"
+	"PxBoxGeometry.h"
+	"PxSphereGeometry.h"
+	"PxCapsuleGeometry.h"
+	"PxPlaneGeometry.h"
+	"PxConvexMeshGeometry.h"
+	"PxTriangleMeshGeometry.h"
+	"PxHeightFieldGeometry.h"
+	"foundation/PxPlane.h"
+	"foundation/PxTransform.h"
+	"foundation/PxUnionCast.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxSphereGeometry.h
+	"geometry/PxGeometry.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxPlaneGeometry.h
+	"foundation/PxPlane.h"
+	"foundation/PxTransform.h"
+	"geometry/PxGeometry.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxTriangleMeshGeometry.h
+	"geometry/PxGeometry.h"
+	"geometry/PxMeshScale.h"
+	"common/PxCoreUtilityTypes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxHeightFieldGeometry.h
+	"geometry/PxTriangleMeshGeometry.h"
+	"common/PxCoreUtilityTypes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxGeometryQuery.h
+	"common/PxPhysXCommonConfig.h"
+	"PxQueryReport.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxQueryReport.h
+	"PxPhysXConfig.h"
+	"foundation/PxVec3.h"
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxPhysXConfig.h
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxHeightField.h
+	"geometry/PxHeightFieldFlag.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxHeightFieldFlag.h
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxHeightFieldDesc.h
+	"common/PxPhysXCommonConfig.h"
+	"geometry/PxHeightFieldFlag.h"
+	"common/PxCoreUtilityTypes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxHeightFieldSample.h
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxBitAndData.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxMeshQuery.h
+	"common/PxPhysXCommonConfig.h"
+	"PxQueryReport.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxSimpleTriangleMesh.h
+	"foundation/PxVec3.h"
+	"foundation/PxFlags.h"
+	"common/PxCoreUtilityTypes.h"
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxTriangle.h
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxVec3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/geometry/PxTriangleMesh.h
+	"foundation/PxVec3.h"
+	"foundation/PxBounds3.h"
+	"common/PxPhysXCommonConfig.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxActor.h
+	"PxPhysXConfig.h"
+	"foundation/PxBounds3.h"
+	"PxClient.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxClient.h
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxAggregate.h
+	"PxPhysXConfig.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxArticulation.h
+	"PxPhysXConfig.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxArticulationJoint.h
+	"PxPhysXConfig.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxArticulationLink.h
+	"PxPhysXConfig.h"
+	"PxArticulationJoint.h"
+	"PxRigidBody.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxRigidBody.h
+	"PxRigidActor.h"
+	"PxForceMode.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxRigidActor.h
+	"PxActor.h"
+	"PxShape.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxShape.h
+	"PxPhysXConfig.h"
+	"common/PxBase.h"
+	"geometry/PxGeometry.h"
+	"geometry/PxGeometryHelpers.h"
+	"PxQueryReport.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxForceMode.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxBatchQuery.h
+	"PxPhysXConfig.h"
+	"PxShape.h"
+	"PxBatchQueryDesc.h"
+	"PxQueryReport.h"
+	"PxQueryFiltering.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxBatchQueryDesc.h
+	"PxPhysXConfig.h"
+	"PxClient.h"
+	"PxFiltering.h"
+	"PxQueryFiltering.h"
+	"PxQueryReport.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxFiltering.h
+	"PxPhysXConfig.h"
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxQueryFiltering.h
+	"PxPhysXConfig.h"
+	"PxFiltering.h"
+	"PxQueryReport.h"
+	"PxClient.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxConstraint.h
+	"PxPhysXConfig.h"
+	"PxConstraintDesc.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxConstraintDesc.h
+	"PxPhysXConfig.h"
+	"foundation/PxFlags.h"
+	"foundation/PxMath.h"
+	"foundation/PxVec3.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxContact.h
+	"foundation/PxVec3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxContactModifyCallback.h
+	"PxPhysXConfig.h"
+	"PxShape.h"
+	"PxContact.h"
+	"foundation/PxTransform.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxDeletionListener.h
+	"PxPhysXConfig.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxLockedData.h
+	"PxPhysXConfig.h"
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxMaterial.h
+	"PxPhysXConfig.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxPhysics.h
+	"PxPhysXConfig.h"
+	"PxDeletionListener.h"
+	"foundation/PxTransform.h"
+	"PxShape.h"
+	"physxvisualdebuggersdk/PvdConnectionManager.h"
+	"cloth/PxClothTypes.h"
+	"cloth/PxClothFabric.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cloth/PxClothTypes.h
+	"PxPhysXConfig.h"
+	"foundation/PxFlags.h"
+	"foundation/PxVec3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cloth/PxClothFabric.h
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxRigidDynamic.h
+	"PxRigidBody.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxRigidStatic.h
+	"PxPhysXConfig.h"
+	"PxRigidActor.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxScene.h
+	"PxVisualizationParameter.h"
+	"PxSceneDesc.h"
+	"PxSimulationStatistics.h"
+	"PxQueryReport.h"
+	"PxQueryFiltering.h"
+	"PxClient.h"
+	"particles/PxParticleSystem.h"
+	"particles/PxParticleFluid.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxVisualizationParameter.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxSceneDesc.h
+	"PxPhysXConfig.h"
+	"foundation/PxFlags.h"
+	"foundation/PxBounds3.h"
+	"PxFiltering.h"
+	"PxBroadPhase.h"
+	"common/PxTolerancesScale.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxBroadPhase.h
+	"PxPhysXConfig.h"
+	"foundation/PxBounds3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxSimulationStatistics.h
+	"PxPhysXConfig.h"
+	"geometry/PxGeometry.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/particles/PxParticleSystem.h
+	"particles/PxParticleBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/particles/PxParticleBase.h
+	"PxPhysXConfig.h"
+	"foundation/PxBounds3.h"
+	"PxFiltering.h"
+	"particles/PxParticleBaseFlag.h"
+	"PxActor.h"
+	"particles/PxParticleCreationData.h"
+	"particles/PxParticleReadData.h"
+	"PxForceMode.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/particles/PxParticleBaseFlag.h
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/particles/PxParticleCreationData.h
+	"PxPhysXConfig.h"
+	"foundation/PxVec3.h"
+	"foundation/PxStrideIterator.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/particles/PxParticleReadData.h
+	"foundation/PxStrideIterator.h"
+	"PxLockedData.h"
+	"foundation/PxFlags.h"
+	"PxParticleFlag.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/particles/PxParticleFlag.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/particles/PxParticleFluid.h
+	"particles/PxParticleFluidReadData.h"
+	"particles/PxParticleBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/particles/PxParticleFluidReadData.h
+	"particles/PxParticleReadData.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxSceneLock.h
+	"PxPhysXConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxSimulationEventCallback.h
+	"foundation/PxVec3.h"
+	"foundation/PxTransform.h"
+	"foundation/PxMemory.h"
+	"PxPhysXConfig.h"
+	"PxFiltering.h"
+	"PxContact.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/foundation/PxMemory.h
+	"foundation/PxPreprocessor.h"
+	"foundation/PxIntrinsics.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxSpatialIndex.h
+	"PxPhysXConfig.h"
+	"foundation/PxTransform.h"
+	"geometry/PxGeometry.h"
+	"PxQueryReport.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxVolumeCache.h
+	"PxScene.h"
+	"geometry/PxGeometryHelpers.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/characterkinematic/PxBoxController.h
+	"characterkinematic/PxCharacter.h"
+	"characterkinematic/PxController.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/characterkinematic/PxCharacter.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/characterkinematic/PxController.h
+	"characterkinematic/PxCharacter.h"
+	"characterkinematic/PxExtended.h"
+	"characterkinematic/PxControllerObstacles.h"
+	"PxQueryFiltering.h"
+	"foundation/PxFoundation.h"
+	"foundation/PxErrorCallback.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/characterkinematic/PxExtended.h
+	"PxPhysXConfig.h"
+	"foundation/PxTransform.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/characterkinematic/PxControllerObstacles.h
+	"characterkinematic/PxCharacter.h"
+	"characterkinematic/PxExtended.h"
+	"geometry/PxGeometry.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/characterkinematic/PxCapsuleController.h
+	"characterkinematic/PxCharacter.h"
+	"characterkinematic/PxController.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/characterkinematic/PxControllerBehavior.h
+	"characterkinematic/PxCharacter.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/characterkinematic/PxControllerManager.h
+	"characterkinematic/PxCharacter.h"
+	"PxPhysXConfig.h"
+	"foundation/PxFlags.h"
+	"common/PxRenderBuffer.h"
+	"foundation/PxFoundation.h"
+	"foundation/PxErrorCallback.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cloth/PxCloth.h
+	"PxPhysXConfig.h"
+	"PxActor.h"
+	"PxLockedData.h"
+	"PxFiltering.h"
+	"cloth/PxClothFabric.h"
+	"cloth/PxClothTypes.h"
+	"cloth/PxClothCollisionData.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cloth/PxClothCollisionData.h
+	"PxPhysXConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cloth/PxClothParticleData.h
+	"PxPhysXConfig.h"
+	"PxLockedData.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cooking/Pxc.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cooking/PxConvexMeshDesc.h
+	"foundation/PxVec3.h"
+	"foundation/PxFlags.h"
+	"common/PxCoreUtilityTypes.h"
+	"geometry/PxConvexMesh.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cooking/PxCooking.h
+	"common/PxPhysXCommonConfig.h"
+	"common/PxTolerancesScale.h"
+	"cooking/Pxc.h"
+	"cooking/PxConvexMeshDesc.h"
+	"cooking/PxTriangleMeshDesc.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cooking/PxTriangleMeshDesc.h
+	"PxPhysXConfig.h"
+	"geometry/PxSimpleTriangleMesh.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/cooking/PxGaussMapLimit.h
+	"cooking/PxCooking.h"
+	"foundation/PxAssert.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxDefaultStreams.h
+	<stdio.h>
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxIO.h"
+	"foundation/PxFoundation.h"
+	"extensions/wiiu/PxWiiUFileHandle.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxDistanceJoint.h
+	"extensions/PxJoint.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxJoint.h
+	"foundation/PxTransform.h"
+	"PxRigidActor.h"
+	"PxConstraint.h"
+	"common/PxBase.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxExtensionsAPI.h
+	"foundation/PxErrorCallback.h"
+	"extensions/PxDefaultAllocator.h"
+	"extensions/PxConstraintExt.h"
+	"extensions/PxDistanceJoint.h"
+	"extensions/PxFixedJoint.h"
+	"extensions/PxPrismaticJoint.h"
+	"extensions/PxRevoluteJoint.h"
+	"extensions/PxSphericalJoint.h"
+	"extensions/PxD6Joint.h"
+	"extensions/PxDefaultSimulationFilterShader.h"
+	"extensions/PxDefaultErrorCallback.h"
+	"extensions/PxDefaultStreams.h"
+	"extensions/PxRigidBodyExt.h"
+	"extensions/PxShapeExt.h"
+	"extensions/PxParticleExt.h"
+	"extensions/PxTriangleMeshExt.h"
+	"extensions/PxSerialization.h"
+	"extensions/PxVisualDebuggerExt.h"
+	"extensions/PxStringTableExt.h"
+	"extensions/PxDefaultCpuDispatcher.h"
+	"extensions/PxSmoothNormals.h"
+	"extensions/PxSimpleFactory.h"
+	"extensions/PxVisualDebuggerExt.h"
+	"extensions/PxStringTableExt.h"
+	"extensions/PxClothFabricCooker.h"
+	"extensions/PxBroadPhaseExt.h"
+	"extensions/ps3/PxPS3Extension.h"
+	"extensions/ps3/PxDefaultSpuDispatcher.h"
+	"extensions/wiiu/PxWiiUExtension.h"
+	"extensions/wiiu/PxWiiUFileHandle.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxDefaultAllocator.h
+	"foundation/PxAllocatorCallback.h"
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxAssert.h"
+	<stdlib.h>
+	<malloc.h>
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxConstraintExt.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxFixedJoint.h
+	"extensions/PxJoint.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxPrismaticJoint.h
+	"extensions/PxJoint.h"
+	"extensions/PxJointLimit.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxJointLimit.h
+	"foundation/PxMath.h"
+	"PxPhysXConfig.h"
+	"common/PxTolerancesScale.h"
+	"PxJoint.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxRevoluteJoint.h
+	"extensions/PxJoint.h"
+	"extensions/PxJointLimit.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxSphericalJoint.h
+	"extensions/PxJoint.h"
+	"extensions/PxJointLimit.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxD6Joint.h
+	"extensions/PxJoint.h"
+	"extensions/PxJointLimit.h"
+	"foundation/PxFlags.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxDefaultSimulationFilterShader.h
+	"PxPhysXConfig.h"
+	"PxFiltering.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxDefaultErrorCallback.h
+	"foundation/PxErrorCallback.h"
+	"PxPhysXConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxRigidBodyExt.h
+	"PxPhysXConfig.h"
+	"PxRigidBody.h"
+	"PxQueryReport.h"
+	"PxFiltering.h"
+	"PxQueryFiltering.h"
+	"PxScene.h"
+	"PxClient.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxShapeExt.h
+	"PxPhysXConfig.h"
+	"foundation/PxPlane.h"
+	"PxShape.h"
+	"PxRigidActor.h"
+	"geometry/PxGeometryQuery.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxParticleExt.h
+	"PxPhysXConfig.h"
+	"foundation/PxStrideIterator.h"
+	"foundation/PxBounds3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxTriangleMeshExt.h
+	"PxPhysXConfig.h"
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxSerialization.h
+	"PxPhysXConfig.h"
+	"common/PxBase.h"
+	"cooking/PxCooking.h"
+	"foundation/PxIO.h"
+	"common/PxTolerancesScale.h"
+	"common/PxTypeInfo.h"
+	"common/PxStringTable.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxVisualDebuggerExt.h
+	"pvd/PxVisualDebugger.h"
+	"foundation/Px.h"
+	"PxPhysXConfig.h"
+	"foundation/PxFlags.h"
+	"physxvisualdebuggersdk/PvdConnectionManager.h"
+	"physxvisualdebuggersdk/PvdConnection.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxStringTableExt.h
+	"foundation/Px.h"
+	"common/PxStringTable.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxDefaultCpuDispatcher.h
+	"common/PxPhysXCommonConfig.h"
+	"pxtask/PxCpuDispatcher.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxSmoothNormals.h
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxSimpleFactory.h
+	"common/PxPhysXCommonConfig.h"
+	"foundation/PxTransform.h"
+	"foundation/PxPlane.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxClothFabricCooker.h
+	"common/PxPhysXCommonConfig.h"
+	"PxClothMeshDesc.h"
+	"cloth/PxClothFabric.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxClothMeshDesc.h
+	"common/PxPhysXCommonConfig.h"
+	"geometry/PxSimpleTriangleMesh.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxBroadPhaseExt.h
+	"PxPhysXConfig.h"
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxBinaryConverter.h
+	"common/PxPhysXCommonConfig.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxRepXSerializer.h
+	"common/PxBase.h"
+	"extensions/PxRepXSimpleType.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxRepXSimpleType.h
+	"foundation/PxSimpleTypes.h"
+	"cooking/PxCooking.h"
+	"common/PxStringTable.h"
+	"common/PxSerialFramework.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/extensions/PxJointRepXSerializer.h
+	"foundation/PxSimpleTypes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleComponents.h
+	"foundation/PxMemory.h"
+	"foundation/PxVec3.h"
+	"common/PxCoreUtilityTypes.h"
+	"PxVehicleSDK.h"
+	"common/PxTypeInfo.h"
+	"foundation/PxIO.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleSDK.h
+	"foundation/Px.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleDrive.h
+	"vehicle/PxVehicleWheels.h"
+	"vehicle/PxVehicleComponents.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleWheels.h
+	"PxFiltering.h"
+	"foundation/PxSimpleTypes.h"
+	"vehicle/PxVehicleShaders.h"
+	"vehicle/PxVehicleComponents.h"
+	"common/PxBase.h"
+	"PxRigidDynamic.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleShaders.h
+	"vehicle/PxVehicleSDK.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleDrive4W.h
+	"vehicle/PxVehicleDrive.h"
+	"vehicle/PxVehicleWheels.h"
+	"vehicle/PxVehicleComponents.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleDriveTank.h
+	"vehicle/PxVehicleDrive.h"
+	"vehicle/PxVehicleWheels.h"
+	"vehicle/PxVehicleComponents.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleTireFriction.h
+	"foundation/PxSimpleTypes.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleUpdate.h
+	"vehicle/PxVehicleSDK.h"
+	"vehicle/PxVehicleTireFriction.h"
+	"foundation/PxSimpleTypes.h"
+	"foundation/PxMemory.h"
+	"foundation/PxTransform.h"
+	"PxBatchQueryDesc.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleUtilControl.h
+	"vehicle/PxVehicleSDK.h"
+	"vehicle/PxVehicleDrive4W.h"
+	"vehicle/PxVehicleDriveNW.h"
+	"vehicle/PxVehicleDriveTank.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleDriveNW.h
+	"vehicle/PxVehicleDrive.h"
+	"vehicle/PxVehicleWheels.h"
+	"vehicle/PxVehicleComponents.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleUtilSetup.h
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleUtilTelemetry.h
+	"vehicle/PxVehicleSDK.h"
+	"foundation/PxSimpleTypes.h"
+	"foundation/PxVec3.h"
+
+1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/vehicle/PxVehicleNoDrive.h
+	"vehicle/PxVehicleWheels.h"
+	"vehicle/PxVehicleComponents.h"
+
