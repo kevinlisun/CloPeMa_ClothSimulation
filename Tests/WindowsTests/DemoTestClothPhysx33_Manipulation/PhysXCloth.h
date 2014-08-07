@@ -292,7 +292,7 @@ public:
 			oldSet = new PxClothParticle[total];
 			newSet = new PxClothParticle[total];
 
-			pCloth->setSolverFrequency(100.0f); 
+			pCloth->setSolverFrequency(500.0f); 
 			  
 			PxClothCollisionPlane p;
 			p.normal = PxVec3(0.0f, 1.0f, 0.0f);
