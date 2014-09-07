@@ -2,9 +2,9 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="PhysXCloth.h" open="1" top="1" tabpos="2">
-		<Cursor position="8457" topLine="275" />
+		<Cursor position="6956" topLine="289" />
 	</File>
 	<File name="main.cxx" open="1" top="0" tabpos="1">
-		<Cursor position="4367" topLine="185" />
+		<Cursor position="4272" topLine="213" />
 	</File>
 </CodeBlocks_layout_file>

@@ -201,7 +201,7 @@ void InitGL() {
 	//initialize physx simulator
 	simulator.init();
 	simulator.createStaticActors();
-	simulator.createCloth(1.5f,1.5f,3.0f,0.05f);
+	simulator.createCloth(1.5f,1.5f,3.0f,0.025f);
 }
 
 void OnReshape(int nw, int nh) {

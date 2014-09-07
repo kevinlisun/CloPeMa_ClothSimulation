@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/test.dir/main.cxx.o  -o test -rdynamic -lGLU -lGL -lSM -lICE -lX11 -lXext -lGLEW /usr/local/lib/libglut.so -lXmu -lXi -Wl,-rpath,/usr/local/lib 

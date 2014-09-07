@@ -1,1 +1,0 @@
-/home/kevin/CloPeMa_ClothSimulation/testLIBs/build/CMakeFiles/test.dir

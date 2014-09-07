@@ -56,12 +56,12 @@ public:
 		pScene = pPhysicsSDK->createScene(sceneDesc);
 		if (!pScene)
 			cerr<<"createScene failed!"<<endl;
-/*
+
 		pScene->setVisualizationParameter(PxVisualizationParameter::eSCALE,				 1.0);
 		pScene->setVisualizationParameter(PxVisualizationParameter::eCOLLISION_SHAPES,	1.0f);
 		pScene->setVisualizationParameter(PxVisualizationParameter::eCOLLISION_EDGES,	1.0f);
 		pScene->setVisualizationParameter(PxVisualizationParameter::eACTOR_AXES,	1.0f);
-*/
+
 		//gScene->setVisualizationParameter(PxVisualizationParameter::eDEFORMABLE_MESH, 1.0f);
 		//gScene->setVisualizationParameter(PxVisualizationParameter::eDEFORMABLE_SELFCOLLISIONS, 1.0f);
 		//gScene->setVisualizationParameter(PxVisualizationParameter::eCOLLISION_DYNAMIC, 1.0f);
@@ -230,18 +230,17 @@ public:
 		for(size_t i=0;i<meshDesc.points.count;i++) {
 			points[i].pos = *p;
 			// Fixing the top corner points
-			if(i==0 || i==numX)
-				points[i].invWeight =0;
+			if(i<=5 || (i<=numX+2 & i>=numX-2))
+				points[i].invWeight = 1.f;
 			else
 				points[i].invWeight = 1.f;
 			p++;
 		}
 		pCloth = pPhysicsSDK->createCloth(tr,*fabric,points,  PxClothFlag::eSWEPT_CONTACT|PxClothFlag::eSCENE_COLLISION);
 
-
 		if(pCloth) {
 
-			pCloth->setSolverFrequency(100.0f);
+			pCloth->setSolverFrequency(500.0f);
 
 			PxClothCollisionSphere s;
 			s.pos=PxVec3(0,2,0);
@@ -291,17 +290,19 @@ public:
 			pCloth->setSelfCollisionStiffness(0.25f);
 
             // setting constraint types
-			pCloth->setStretchConfig(PxClothFabricPhaseType::eVERTICAL, PxClothStretchConfig(3.0f));
-			pCloth->setStretchConfig(PxClothFabricPhaseType::eHORIZONTAL, PxClothStretchConfig(3.0f));
-			pCloth->setStretchConfig(PxClothFabricPhaseType::eSHEARING, PxClothStretchConfig(3.0f));
-			pCloth->setStretchConfig(PxClothFabricPhaseType::eBENDING, PxClothStretchConfig(3.0f));
+			pCloth->setStretchConfig(PxClothFabricPhaseType::eVERTICAL, PxClothStretchConfig(1.0f));
+			pCloth->setStretchConfig(PxClothFabricPhaseType::eHORIZONTAL, PxClothStretchConfig(1.0f));
+			pCloth->setStretchConfig(PxClothFabricPhaseType::eSHEARING, PxClothStretchConfig(1.0f));
+			pCloth->setStretchConfig(PxClothFabricPhaseType::eBENDING, PxClothStretchConfig(1.0f));
 
 			PxClothStretchConfig stretchConfig;
-			stretchConfig.stiffness = 0.5f;
+			stretchConfig.stiffness = 2.0f;
 			stretchConfig.stiffnessMultiplier = 0.5f;
 			stretchConfig.compressionLimit = 0.9f;
 			stretchConfig.stretchLimit = 1.1f;
 			pCloth->setStretchConfig(PxClothFabricPhaseType::eVERTICAL, stretchConfig);
+
+            pCloth->setFrictionCoefficient(0.5f);
 
 			pCloth->setRestOffset(0.0025f);
 			pScene->addActor(*pCloth);
