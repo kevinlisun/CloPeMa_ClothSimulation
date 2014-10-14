@@ -53,6 +53,8 @@ public:
         //Create the scene
         PxSceneDesc sceneDesc(pPhysicsSDK->getTolerancesScale());
         sceneDesc.gravity=PxVec3(0.0f, -9.8f, 0.0f);
+        //added for friction
+        sceneDesc.frictionType = PxFrictionType::eTWO_DIRECTIONAL;
 
         if(!sceneDesc.cpuDispatcher)
         {
@@ -326,7 +328,7 @@ public:
             points[i].pos = *p;
 
             if( i%10 ==0 )
-                points[i].pos.y += 100;
+                points[i].pos.y += 10;
 
             //Fixing the top corner points
             if(i==0 || i==numX)
