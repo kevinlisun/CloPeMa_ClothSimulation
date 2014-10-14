@@ -45,7 +45,7 @@
 			<Add directory="/usr/local/include/pcl-1.7" />
 			<Add directory="/usr/include/eigen3" />
 			<Add directory="/usr/include/vtk-5.8" />
-			<Add directory="/usr/include/pcl-1.7/pcl/surface" />
+			<Add directory="/usr/include/pcl-1.7" />
 		</Compiler>
 		<Linker>
 			<Add option="-lPhysX3" />
@@ -79,6 +79,11 @@
 			<Add library="X11" />
 			<Add library="rt" />
 			<Add library="pthread" />
+			<Add library="../../../../../../usr/lib/libpcl_io.so" />
+			<Add library="/usr/lib/libpcl_common.so" />
+			<Add library="/usr/lib/libpcl_io.so" />
+			<Add library="/usr/lib/libpcl_*" />
+			<Add library="../../../../../../opt/ros/hydro/lib/libpcl_ros_*" />
 			<Add directory="$(#freeglut.lib)" />
 			<Add directory="../../../../Libraries/PhysXSDK_3.3/Lib/linux64" />
 			<Add directory="/usr/lib" />
@@ -86,7 +91,6 @@
 			<Add directory="/lib/x86_64-linux-gnu/libpthread-2..17.so" />
 			<Add directory="/usr/lib/libboost_thread.so" />
 			<Add directory="/usr/lib/libboost_thread-mt.so" />
-			<Add directory="/usr/lib/libpcl*" />
 		</Linker>
 		<Unit filename="PhysXCloth.h" />
 		<Unit filename="main.cxx" />

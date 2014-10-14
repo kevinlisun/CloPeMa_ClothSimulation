@@ -456,8 +456,8 @@ void OnRender() {
 }
 
 void OnShutdown() {
-    simulator.writeCloth();
-    // simulator.writePCL();
+    //simulator.writeCloth();
+    simulator.writePCL();
 	simulator.shutdown();
 
 	glDeleteTextures(1, &textureID);

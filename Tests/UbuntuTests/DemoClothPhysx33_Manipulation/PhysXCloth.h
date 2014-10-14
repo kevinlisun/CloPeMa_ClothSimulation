@@ -399,6 +399,24 @@ public:
 
     void writeCloth()
     {
+        pcl::PointCloud<pcl::PointXYZ> cloud;
+
+        // Fill in the cloud data
+        cloud.width    = numVertices;
+        cloud.height   = 1;
+        cloud.is_dense = false;
+        cloud.points.resize( numVertices );
+
+        for (size_t i = 0; i < cloud.points.size (); i++ )
+        {
+            cloud.points[i].x = pos[i].x;
+            cloud.points[i].y = pos[i].y;
+            cloud.points[i].z = pos[i].z;
+        }
+
+        pcl::io::savePCDFileASCII ("pcl.pcd", cloud);
+        std::cerr << "Saved " << cloud.points.size () << " data points to pcl.pcd." << std::endl;
+
         //record particles at time t
         ofstream myfile;
         myfile.open ("pcl.txt");
@@ -416,7 +434,7 @@ public:
         pcl::PointCloud<pcl::PointXYZ> cloud;
 
         // Fill in the cloud data
-        cloud.width    = 5;
+        cloud.width    = numVertices;
         cloud.height   = 1;
         cloud.is_dense = false;
         cloud.points.resize( numVertices );
