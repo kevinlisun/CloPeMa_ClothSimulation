@@ -231,13 +231,16 @@ public:
 			points[i].pos = *p;
 			// Fixing the top corner points
 			if(i<=5 || (i<=numX+2 & i>=numX-2))
+<<<<<<< HEAD
 				points[i].invWeight =0;
+=======
+				points[i].invWeight = 1.f;
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
 			else
 				points[i].invWeight = 1.f;
 			p++;
 		}
 		pCloth = pPhysicsSDK->createCloth(tr,*fabric,points,  PxClothFlag::eSWEPT_CONTACT|PxClothFlag::eSCENE_COLLISION);
-
 
 		if(pCloth) {
 
@@ -302,6 +305,8 @@ public:
 			stretchConfig.compressionLimit = 0.9f;
 			stretchConfig.stretchLimit = 1.1f;
 			pCloth->setStretchConfig(PxClothFabricPhaseType::eVERTICAL, stretchConfig);
+
+            pCloth->setFrictionCoefficient(0.5f);
 
 			pCloth->setRestOffset(0.0025f);
 			pScene->addActor(*pCloth);

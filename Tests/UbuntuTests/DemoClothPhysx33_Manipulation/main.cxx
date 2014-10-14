@@ -1,5 +1,5 @@
-#define _USE_MATH_DEFINES 
-#include <iostream> 
+#define _USE_MATH_DEFINES
+#include <iostream>
 
 #include <cassert>
 
@@ -10,17 +10,17 @@
 
 #include <GL/freeglut.h>
 
-#ifdef _WIN32  
+#ifdef _WIN32
 #pragma comment(lib, "PhysX3_x86.lib")
-#pragma comment(lib, "PhysX3Common_x86.lib") 
-#pragma comment(lib, "PhysX3Cooking_x86.lib") 
+#pragma comment(lib, "PhysX3Common_x86.lib")
+#pragma comment(lib, "PhysX3Cooking_x86.lib")
 #pragma comment(lib, "PhysX3Extensions.lib")
-#pragma comment(lib, "PxTask.lib") 
+#pragma comment(lib, "PxTask.lib")
 
 #endif
 
 #include <vector>
- 
+
 #include <glm/glm.hpp>
 
 using namespace std;
@@ -34,12 +34,12 @@ int state =1 ;
 float tx, ty, tz = -8;
 
 const int GRID_SIZE=10;
- 
- 
-float currentTime = 0; 
+
+
+float currentTime = 0;
 
 const int total_points = 16;
- 
+
 float frameTime =0 ;
 
 float startTime =0, fps=0 ;
@@ -47,12 +47,12 @@ int totalFrames=0;
 
 using namespace std;
 
-GLuint textureID; 
+GLuint textureID;
 
 GLfloat mat_white[4]={1.0f,1.0f,1.0f,1};
 GLfloat mat_grey[4]={0.25f,0.25f,0.25f,1};
 GLfloat mat_brown[4]={0.5f,0.3f,0.0f,1};
- 
+
 
 #include "PhysXCloth.h"
 PhysXSimulator simulator;
@@ -73,11 +73,16 @@ void OnMouseDown(int button, int s, int x, int y)
 	else if(button == GLUT_RIGHT_BUTTON)
 		state = 2;
 	else
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 		state = 1; 
+=======
+		state = 1;
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 
 	if (s == GLUT_DOWN)
 	{
 		oldX = x;
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 		oldY = y; 
 
 		if(state == 1) {
@@ -91,12 +96,31 @@ void OnMouseDown(int button, int s, int x, int y)
 			double objX=0, objY=0, objZ=0;
 			gluUnProject(winX, winY, winZ,  MV,  P, viewport, &objX, &objY, &objZ);
 			PxVec3 pt(objX,objY, objZ); 
+=======
+		oldY = y;
+
+		if(state == 1) {
+			int winY = (viewport[3] - y);
+			int winX = x;
+			float winZ = 0;
+
+			glReadPixels(winX, winY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &winZ );
+
+
+			double objX=0, objY=0, objZ=0;
+			gluUnProject(winX, winY, winZ,  MV,  P, viewport, &objX, &objY, &objZ);
+			PxVec3 pt(objX,objY, objZ);
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 			//cout << "Pt: " << objX <<" " << objY << " " << objZ << endl;
 			selected_index = simulator.onPickingClothVertex(pt);
 		}
 	}
 
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	if(s==GLUT_UP) {   
+=======
+	if(s==GLUT_UP) {
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 		selected_index = -1;
 		glutSetCursor(GLUT_CURSOR_INHERIT);
 	}
@@ -107,6 +131,7 @@ void OnMouseMove(int x, int y)
 {
 	if(selected_index == -1) {
 		if (state == 0)
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 			tz *= (1 + (y - oldY)/60.0f); 
 		else if (state == 2) {
 			tx -= (x - oldX)/50.0f; 
@@ -134,11 +159,40 @@ void OnMouseMove(int x, int y)
 	
 	oldX = x; 
 	oldY = y; 
+=======
+			tz *= (1 + (y - oldY)/60.0f);
+		else if (state == 2) {
+			tx -= (x - oldX)/50.0f;
+			ty += (y - oldY)/50.0f;
+		}
+		else
+		{
+			rY += (x - oldX)/5.0f;
+			rX += (y - oldY)/5.0f;
+		}
+	} else {
+		float delta = 10.0f/abs(tz);
+		float valX = (x - oldX)/delta;
+		float valY = (y - oldY )/delta;
+		if(abs(valX)>abs(valY))
+			glutSetCursor(GLUT_CURSOR_LEFT_RIGHT);
+		else
+			glutSetCursor(GLUT_CURSOR_UP_DOWN);
+
+		PxVec3& pos = simulator.getPickedClothParticlePosition(selected_index);
+		pos += Right*valX + Up*valY;
+		simulator.updateClothParticlePosition(selected_index, pos);
+	}
+
+
+	oldX = x;
+	oldY = y;
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 
 	glutPostRedisplay();
 }
 
-//procedural texture generator 
+//procedural texture generator
 void GenerateTexture(int width, int height) {
 	glGenTextures(1, &textureID);
 	glBindTexture(GL_TEXTURE_2D, textureID);
@@ -157,7 +211,7 @@ void GenerateTexture(int width, int height) {
 	int count = 0;
 	//first draw horizontal lines
 	for(int j=0;j<height;++j) {
-		for(int i=0;i<width;i++) { 
+		for(int i=0;i<width;i++) {
 			pData[count++]= 255;
 			pData[count++]= (i<hwidth && j<height  || i>hwidth && j>height )?255:0;
 			pData[count++]= (i<width  && j<hheight || i>width  && j>hheight)?0:255;
@@ -184,21 +238,26 @@ void DrawGrid()
 		glVertex3f((float)GRID_SIZE,0,(float)i);
 	}
 	glEnd();
-} 
+}
 
-void InitGL() { 
+void InitGL() {
 	CHECK_GL_ERROR
 	glClearColor(1,1,1,1);
 	startTime = (float)glutGet(GLUT_ELAPSED_TIME);
-	  
-	glEnable(GL_DEPTH_TEST);  
+
+	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);
     glPolygonMode(GL_BACK, GL_LINE);
-	glEnable(GL_LIGHT0); //key light 
+	glEnable(GL_LIGHT0); //key light
 	glEnable(GL_LIGHT1); //fill light
 	glEnable(GL_LIGHT2); //rim light
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	glEnable(GL_LIGHTING); 
 	glEnable(GL_NORMALIZE); 
+=======
+	glEnable(GL_LIGHTING);
+	glEnable(GL_NORMALIZE);
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	glEnable(GL_POINT_SMOOTH);
 	glPointSize(5);
 
@@ -206,48 +265,52 @@ void InitGL() {
 	GLfloat mat_key[4]={0.4f,0.4f,0.25f,0.33f};
 	GLfloat mat_fill[4]={0.35f,0.35f,0.45f,0.33f};
 
-	
+
 	//Rim/back light setup
 	GLfloat pos[4] = {-0.1f,0.65f,-1.0f,0}; //back(rim) light position
-	 
+
 	glLightfv(GL_LIGHT2, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT2, GL_DIFFUSE, mat_grey);
-	glLightfv(GL_LIGHT2, GL_SPECULAR, mat_grey); 
+	glLightfv(GL_LIGHT2, GL_SPECULAR, mat_grey);
 	glLightfv(GL_LIGHT2, GL_POSITION, pos);
 
 	//key light setup
 	pos[0] = -1;
 	pos[1] = 1;
-	pos[2] = 1; 
+	pos[2] = 1;
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, mat_key); 
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, mat_key); 
+	glLightfv(GL_LIGHT0, GL_SPECULAR, mat_key);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, mat_key);
 	glLightfv(GL_LIGHT0, GL_POSITION, pos);
-	 
+
 	//fill light setup
-	pos[0]=-pos[0]; 
+	pos[0]=-pos[0];
 
 	glLightfv(GL_LIGHT1, GL_POSITION, pos);
 	glLightfv(GL_LIGHT1, GL_AMBIENT, ambient);
-	glLightfv(GL_LIGHT1, GL_DIFFUSE, mat_fill); 
-	glLightfv(GL_LIGHT1, GL_SPECULAR, mat_fill);  
-	
+	glLightfv(GL_LIGHT1, GL_DIFFUSE, mat_fill);
+	glLightfv(GL_LIGHT1, GL_SPECULAR, mat_fill);
+
 	GLfloat ns = 128;
 
-	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_white); 	 
-	glMaterialf(GL_FRONT, GL_SHININESS, ns); 
+	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_white);
+	glMaterialf(GL_FRONT, GL_SHININESS, ns);
 
-	glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);  
-	glDisable(GL_LIGHTING); 
-	 
-	GenerateTexture(128,128); 
-	 
+	glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
+	glDisable(GL_LIGHTING);
+
+	GenerateTexture(128,128);
+
 	CHECK_GL_ERROR
 
 	//initialize physx simulator
 	simulator.init();
 	simulator.createStaticActors();
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	simulator.createCloth(3.5f,3.5f,4.6f,0.05f); 
+=======
+	simulator.createCloth(1.5f,1.5f,4.6f,0.05f);
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 }
 
 void OnReshape(int nw, int nh) {
@@ -256,13 +319,17 @@ void OnReshape(int nw, int nh) {
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	gluPerspective(60, (GLfloat)nw / (GLfloat)nh, 0.1f, 1000.0f); 
+=======
+	gluPerspective(60, (GLfloat)nw / (GLfloat)nh, 0.1f, 1000.0f);
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 
 	glGetDoublev(GL_PROJECTION_MATRIX, P);
 
 	glMatrixMode(GL_MODELVIEW);
 }
- 
+
 void DrawAxes() {
 	glBegin(GL_LINES);
 	glColor3f(1,0,0); glVertex3f(0,0,0); glVertex3f(50,0,0);
@@ -271,13 +338,14 @@ void DrawAxes() {
 	glEnd();
 }
 void DrawPlane() {
-	glBegin(GL_QUADS); 
+	glBegin(GL_QUADS);
 	glNormal3f(0,1,0);
 	glVertex3f(-100, 0,-100);
-	glVertex3f(-100, 0, 100);			
+	glVertex3f(-100, 0, 100);
 	glVertex3f( 100, 0, 100);
 	glVertex3f( 100, 0,-100);
 	glEnd();
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 } 
 
 void DrawSimulatedClothShadow() { 
@@ -288,12 +356,28 @@ void DrawSimulatedClothShadow() {
 }
 
 void DrawSimulatedCloth(bool bShowParticles=false) { 
+=======
+}
+
+void DrawSimulatedClothShadow() {
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glVertexPointer(3, GL_FLOAT, sizeof(PxVec3), &(simulator.pos[0].x));
+	glDrawElements(GL_TRIANGLES, simulator.numIndices, GL_UNSIGNED_INT, &simulator.indices[0]);
+	glDisableClientState(GL_VERTEX_ARRAY);
+}
+
+void DrawSimulatedCloth(bool bShowParticles=false) {
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glEnableClientState(GL_NORMAL_ARRAY);
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 
 	glVertexPointer(3, GL_FLOAT, sizeof(PxVec3), &(simulator.pos[0].x));
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	 
+=======
+
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	glNormalPointer(GL_FLOAT, sizeof(PxVec3), &(simulator.normal[0].x));
 	glTexCoordPointer(2, GL_FLOAT,sizeof(glm::vec2), &(simulator.uvs[0].x));
 
@@ -302,12 +386,20 @@ void DrawSimulatedCloth(bool bShowParticles=false) {
 	glDisableClientState(GL_VERTEX_ARRAY);
 	glDisableClientState(GL_NORMAL_ARRAY);
 	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	 
+=======
+
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	if(bShowParticles) {
 		glDisable(GL_TEXTURE_2D);
 		glDisable(GL_LIGHTING);
 		glBegin(GL_POINTS);
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	
+=======
+
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 		for(size_t i=0;i<simulator.numVertices;++i) {
 			if(selected_index == i)
 				glColor3f(0,1,0);
@@ -315,19 +407,23 @@ void DrawSimulatedCloth(bool bShowParticles=false) {
 				glColor3f(1,0,0);
 			glVertex3fv(&simulator.pos[i].x);
 		}
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 		glEnd(); 
+=======
+		glEnd();
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	}
 }
- 
-void DrawTable() { 
+
+void DrawTable() {
 	//table top
-	
+
 	glPushMatrix();
-		glTranslatef(0,1,0);	
+		glTranslatef(0,1,0);
 		glScalef(2,0.2f,2);
 		glutSolidCube(1);
 	glPopMatrix();
-	
+
 	//the table's base
 	glPushMatrix();
 		glTranslatef(0,0.5f,0);
@@ -337,12 +433,21 @@ void DrawTable() {
 }
   
 
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 void OnRender() {  
 	
 	simulator.step(); 
+=======
+
+void OnRender() {
+
+	simulator.step();
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	simulator.updateCloth();
 	 
 	
+
+
 
 	CHECK_GL_ERROR
 
@@ -351,7 +456,7 @@ void OnRender() {
 	currentTime = newTime;
 	//accumulator += frameTime;
 
-	 
+
 
 	++totalFrames;
 	if((newTime-startTime)>1000)
@@ -365,7 +470,7 @@ void OnRender() {
 	std::stringstream str;
     str<<"FPS: " << fps << ", Frame time (GLUT): " << frameTime << " msecs.";
 
-	glutSetWindowTitle(str.str().c_str()); 
+	glutSetWindowTitle(str.str().c_str());
 
 	glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
@@ -384,41 +489,50 @@ void OnRender() {
 
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_LIGHTING);
-	 
+
 		//draw ground plane
-		glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, mat_white); 
-		DrawPlane(); 
+		glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, mat_white);
+		DrawPlane();
 
 		//draw table
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 		glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, mat_brown); 
 		DrawTable(); 
 		  
 		//draw cloth  
 		glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, mat_white); 
-		glEnable(GL_TEXTURE_2D);
-		 
-		DrawSimulatedCloth();  
+=======
+		glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, mat_brown);
+		DrawTable();
 
-	glDisable(GL_TEXTURE_2D); 
+		//draw cloth
+		glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, mat_white);
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
+		glEnable(GL_TEXTURE_2D);
+
+		DrawSimulatedCloth();
+
+	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
 
 	CHECK_GL_ERROR
-		 
-	// simple XZ planar shadows 
+
+	// simple XZ planar shadows
 	// added a little bias to prevent shadow acne
-	static GLfloat ShadowMat[]={ 1,0,0,0, 
-		0,0,0,0, 
-		0,0,1,0, 
+	static GLfloat ShadowMat[]={ 1,0,0,0,
+		0,0,0,0,
+		0,0,1,0,
 		0.0f,0.001f,0.0f,1 };
 
-	glPushMatrix();	
+	glPushMatrix();
 		glDepthMask(GL_FALSE);
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		  
-		glEnable(GL_CULL_FACE);
-		glMultMatrixf(ShadowMat);		
 
+		glEnable(GL_CULL_FACE);
+		glMultMatrixf(ShadowMat);
+
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 		glColor4f(0.25f, 0.25f, 0.275f,0.2f); 
 		DrawTable();    
 		
@@ -427,17 +541,27 @@ void OnRender() {
 		
 		glDisable(GL_CULL_FACE);		
 		glDisable(GL_BLEND);				
+=======
+		glColor4f(0.25f, 0.25f, 0.275f,0.2f);
+		DrawTable();
+
+		glColor4f(0.25f, 0.25f, 0.275f,0.8f);
+		DrawSimulatedClothShadow();
+
+		glDisable(GL_CULL_FACE);
+		glDisable(GL_BLEND);
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 		glDepthMask(GL_TRUE);
 
 	glPopMatrix();
-	
-	
+
+
 	glDisable(GL_DEPTH_TEST);
-	 
+
 	//draw the axes in the bottom left corner
 	glPushMatrix();
-		glLoadIdentity(); 
-		glTranslatef(50, 50, 0);		
+		glLoadIdentity();
+		glTranslatef(50, 50, 0);
 		glRotatef(rX,1,0,0);
 		glRotatef(rY,0,1,0);
 
@@ -445,26 +569,35 @@ void OnRender() {
 		glPushMatrix();
 			glLoadIdentity();
 			glOrtho(0,width,0,height,-50,50);
-				DrawAxes();  
+				DrawAxes();
 		glPopMatrix();
 
 		glMatrixMode(GL_MODELVIEW);
 	glPopMatrix();
- 
-	 
+
+
 	glutSwapBuffers();
 }
 
-void OnShutdown() {   
+void OnShutdown() {
+    simulator.writeCloth();
+    // simulator.writePCL();
 	simulator.shutdown();
 
-	glDeleteTextures(1, &textureID); 
+	glDeleteTextures(1, &textureID);
 }
 
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 void OnIdle() { 
 	
 	glutPostRedisplay();  
 }  
+=======
+void OnIdle() {
+
+	glutPostRedisplay();
+}
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 
 int main(int argc, char** argv) {
 
@@ -478,9 +611,15 @@ int main(int argc, char** argv) {
 	glutIdleFunc(OnIdle);
 
 	glutMouseFunc(OnMouseDown);
+<<<<<<< HEAD:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	glutMotionFunc(OnMouseMove); 
 	glutCloseFunc(OnShutdown); 
 	  
+=======
+	glutMotionFunc(OnMouseMove);
+	glutCloseFunc(OnShutdown);
+
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225:Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 
 	InitGL();
 

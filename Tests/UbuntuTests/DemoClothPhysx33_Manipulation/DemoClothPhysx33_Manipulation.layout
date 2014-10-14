@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
+<<<<<<< HEAD
 	<ActiveTarget name="Debug" />
 	<File name="PhysXCloth.h" open="1" top="1" tabpos="0">
 		<Cursor position="7242" topLine="294" />
+=======
+	<ActiveTarget name="Release" />
+	<File name="PhysXCloth.h" open="1" top="0" tabpos="1">
+		<Cursor position="12941" topLine="412" />
+	</File>
+	<File name="main.cxx" open="1" top="1" tabpos="2">
+		<Cursor position="2801" topLine="139" />
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
 	</File>
 </CodeBlocks_layout_file>

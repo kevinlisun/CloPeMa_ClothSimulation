@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="PhysXCloth.h" open="1" top="0" tabpos="2">
 		<Cursor position="7132" topLine="259" />
+=======
+	<File name="PhysXCloth.h" open="1" top="1" tabpos="2">
+		<Cursor position="6956" topLine="289" />
+>>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
 	</File>
 	<File name="main.cxx" open="1" top="0" tabpos="1">
 		<Cursor position="4272" topLine="213" />
