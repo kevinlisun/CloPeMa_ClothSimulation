@@ -1276,11 +1276,7 @@
 	<iostream>
 	<vector>
 
-<<<<<<< HEAD
-1407498116 source:/home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33/main.cxx
-=======
 1407494516 source:/home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33/main.cxx
->>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
 	<iostream>
 	<cassert>
 	<cmath>
@@ -1290,19 +1286,13 @@
 	"PhysXCloth.h"
 	<sstream>
 
-<<<<<<< HEAD
-1407501209 /home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33/PhysXCloth.h
-=======
 1409514311 /home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33/PhysXCloth.h
->>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
 	<PxPhysicsAPI.h>
 	<extensions/PxExtensionsAPI.h>
 	<PxToolkit.h>
 	<iostream>
 	<vector>
 
-<<<<<<< HEAD
-=======
 1405457534 /home/kevin/Libraries/freeglut-2.8.1/include/GL/freeglut.h
 	"freeglut_std.h"
 	"freeglut_ext.h"
@@ -1318,4 +1308,3 @@
 1405457534 /home/kevin/Libraries/freeglut-2.8.1/include/GL/freeglut_ext.h
 	<stdarg.h>
 
->>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225

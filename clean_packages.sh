@@ -6,6 +6,7 @@ echo
 
 echo "Removing backup files."
 find ./ -name '*~' | xargs rm
+<<<<<<< HEAD
 find ./ -name '*.pyc' | xargs rm
 find ./ -name '*.pcd' | xargs rm
 find ./ -name '*~' | xargs rm
@@ -42,6 +43,8 @@ find ./ -name '*_points_*.xml' | xargs rm
 find ./ -name '*_pointsL*.xml' | xargs rm
 find ./ -name '*_pointsR*.xml' | xargs rm
 
+=======
+>>>>>>> kevin-dev
 
 
 

@@ -1,9 +1,5 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
-1407506422 source:/home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
-=======
-1409525841 source:/home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
->>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
+1413331254 source:/home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33_Manipulation/main.cxx
 	<iostream>
 	<cassert>
 	<cmath>
@@ -13,9 +9,6 @@
 	"PhysXCloth.h"
 	<sstream>
 
-<<<<<<< HEAD
-1407506422 /home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33_Manipulation/PhysXCloth.h
-=======
 1405457534 /home/kevin/Libraries/freeglut-2.8.1/include/GL/freeglut.h
 	"freeglut_std.h"
 	"freeglut_ext.h"
@@ -31,20 +24,15 @@
 1405457534 /home/kevin/Libraries/freeglut-2.8.1/include/GL/freeglut_ext.h
 	<stdarg.h>
 
-1409527942 /home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33_Manipulation/PhysXCloth.h
->>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
+1413333070 /home/kevin/CloPeMa_ClothSimulation/Tests/UbuntuTests/DemoClothPhysx33_Manipulation/PhysXCloth.h
 	<PxPhysicsAPI.h>
 	<extensions/PxExtensionsAPI.h>
 	<PxToolkit.h>
 	<iostream>
-<<<<<<< HEAD
-	<vector>
-=======
 	<fstream>
 	<vector>
 	<pcl/io/pcd_io.h>
 	<pcl/point_types.h>
->>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
 
 1393472526 /home/kevin/Libraries/PhysXSDK_3.3/Include/PxPhysicsAPI.h
 	"foundation/Px.h"
@@ -1274,8 +1262,6 @@
 	"common/PxPhysXCommonConfig.h"
 	"foundation/PxMat33.h"
 
-<<<<<<< HEAD
-=======
 1385484290 /usr/local/include/pcl-1.7/pcl/io/pcd_io.h
 	<pcl/point_cloud.h>
 	<pcl/io/file_io.h>
@@ -2116,4 +2102,3 @@
 
 1328903545 /usr/include/eigen3/Eigen/src/Eigen2Support/Geometry/ParametrizedLine.h
 
->>>>>>> b264f3b7cacaf5ac3216450d3013794a673b4225
