@@ -323,19 +323,21 @@ public:
 
         PxClothParticle* points=(PxClothParticle*)malloc(sizeof(PxClothParticle)*meshDesc.points.count);
         p = (PxVec3*)meshDesc.points.data;
-        for(size_t i=0; i<meshDesc.points.count; i++)
+
+        if( readCloth(points) == 0 )
         {
-            points[i].pos = *p;
+            for(size_t i=0; i<meshDesc.points.count; i++)
+            {
+                points[i].pos = *p;
 
-            if( i%10 ==0 )
-                points[i].pos.y += 10;
+                //Fixing the top corner points
+                //if(i==0 || i==numX)
+                //    points[i].invWeight = 1.f;
+                //else
+                    points[i].invWeight = 1.f;
+                p++;
+            }
 
-            //Fixing the top corner points
-            if(i==0 || i==numX)
-                points[i].invWeight = 1.f;
-            else
-                points[i].invWeight = 1.f;
-            p++;
         }
 
         pCloth = pPhysicsSDK->createCloth(tr,*fabric,points, PxClothFlag::eSCENE_COLLISION);
@@ -397,6 +399,34 @@ public:
         createCollider();
     }
 
+    int readCloth(PxClothParticle* particles)
+    {
+
+        pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
+
+        if (pcl::io::loadPCDFile<pcl::PointXYZ> ("pcl.pcd", *cloud) == -1) //* load the file
+        {
+            PCL_ERROR ("Couldn't read file pcl.pcd \n");
+            return 0;
+        }
+
+        std::cout << "Loaded "
+                  << cloud->width * cloud->height
+                  << " data points from test_pcd.pcd with the following fields: "
+                  << std::endl;
+
+        for(size_t i = 0; i < cloud->points.size (); i++)
+        {
+            particles[i].pos.x = PxReal(cloud->points[i].x);
+            particles[i].pos.y = PxReal(cloud->points[i].y);
+            particles[i].pos.z = PxReal(cloud->points[i].z);
+            particles[i].invWeight = 1.f;
+            //cout<<i<<endl;
+        }
+        return 1;
+
+    }
+
     void writeCloth()
     {
         pcl::PointCloud<pcl::PointXYZ> cloud;
@@ -416,7 +446,10 @@ public:
 
         pcl::io::savePCDFileASCII ("pcl.pcd", cloud);
         std::cerr << "Saved " << cloud.points.size () << " data points to pcl.pcd." << std::endl;
+    }
 
+    void writeText()
+    {
         //record particles at time t
         ofstream myfile;
         myfile.open ("pcl.txt");
@@ -427,27 +460,6 @@ public:
         }
 
         myfile.close();
-    }
-
-    void writePCL()
-    {
-        pcl::PointCloud<pcl::PointXYZ> cloud;
-
-        // Fill in the cloud data
-        cloud.width    = numVertices;
-        cloud.height   = 1;
-        cloud.is_dense = false;
-        cloud.points.resize( numVertices );
-
-        for (size_t i = 0; i < cloud.points.size (); i++ )
-        {
-            cloud.points[i].x = pos[i].x;
-            cloud.points[i].y = pos[i].y;
-            cloud.points[i].z = pos[i].z;
-        }
-
-        pcl::io::savePCDFileASCII ("pcl.pcd", cloud);
-        std::cerr << "Saved " << cloud.points.size () << " data points to pcl.pcd." << std::endl;
     }
 
 private:
