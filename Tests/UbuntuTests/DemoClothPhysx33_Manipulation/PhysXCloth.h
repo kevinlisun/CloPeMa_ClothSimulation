@@ -54,7 +54,7 @@ public:
         PxSceneDesc sceneDesc(pPhysicsSDK->getTolerancesScale());
         sceneDesc.gravity=PxVec3(0.0f, -9.8f, 0.0f);
         //added for friction
-        sceneDesc.frictionType = PxFrictionType::eTWO_DIRECTIONAL;
+        sceneDesc.frictionType = PxFrictionType::ePATCH;
 
         if(!sceneDesc.cpuDispatcher)
         {
@@ -81,7 +81,7 @@ public:
         //gScene->setVisualizationParameter(PxVisualizationParameter::eCOLLISION_DYNAMIC, 1.0f);
         //gScene->setVisualizationParameter(PxVisualizationParameter::eDEFORMABLE_SHAPES, 1.0f);
 
-        PxMaterial* mMaterial = pPhysicsSDK->createMaterial(0.5,0.5,0.5);
+        PxMaterial* mMaterial = pPhysicsSDK->createMaterial(1.0,0.5,0.1);
 
         //Create actors
         //1) Create ground plane
@@ -334,7 +334,7 @@ public:
                 //if(i==0 || i==numX)
                 //    points[i].invWeight = 1.f;
                 //else
-                    points[i].invWeight = 1.f;
+                points[i].invWeight = 1.f;
                 p++;
             }
 
@@ -360,18 +360,28 @@ public:
             pCloth->addCollisionPlane(p);
             pCloth->addCollisionConvex(convexMask);
 
-            pCloth->setDampingCoefficient(PxVec3(0.25f));
+            pCloth->setDampingCoefficient(PxVec3(0.5f));
             pCloth->setSelfCollisionDistance(0.05f);
             pCloth->setSelfCollisionStiffness(0.5f);
 
+            pCloth->setStretchConfig(PxClothFabricPhaseType::eVERTICAL, PxClothStretchConfig(1.0f));
+            pCloth->setStretchConfig(PxClothFabricPhaseType::eHORIZONTAL, PxClothStretchConfig(0.9f));
+            pCloth->setStretchConfig(PxClothFabricPhaseType::eSHEARING, PxClothStretchConfig(0.9f));
+            pCloth->setStretchConfig(PxClothFabricPhaseType::eBENDING, PxClothStretchConfig(0.9f));
+
             PxClothStretchConfig stretchConfig;
-            stretchConfig.stiffness = 0.8f;
+            stretchConfig.stiffness = 0.5f;
             stretchConfig.stiffnessMultiplier = 0.5f;
             stretchConfig.compressionLimit = 0.6f;
             stretchConfig.stretchLimit = 1.0f;
             pCloth->setStretchConfig(PxClothFabricPhaseType::eVERTICAL, stretchConfig);
 
+            // create a motion structure
+            //PxClothParticleMotionConstraints motionConstraints;
+            //pCloth->setMotionConstraints(motionConstraints);
+
             pCloth->setFrictionCoefficient(1.f);
+            pCloth->setCollisionMassScale(50.0f);
 
             pCloth->setRestOffset(0.0025f);
             pScene->addActor(*pCloth);
@@ -387,7 +397,7 @@ public:
         if (!plane)
             cerr<<"create plane failed!"<<endl;
 
-        pMaterial = pPhysicsSDK->createMaterial(0.5,0.5,0.5);
+        pMaterial = pPhysicsSDK->createMaterial(1.0,1.0,0.5);
 
         PxShape* shape = plane->createShape(PxPlaneGeometry(), *pMaterial);
         if (!shape)
