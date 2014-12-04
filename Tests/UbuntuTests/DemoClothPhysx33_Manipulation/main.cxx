@@ -23,6 +23,8 @@
 
 #include <glm/glm.hpp>
 
+#include <math.h>
+
 using namespace std;
 const int width = 800, height = 600;
 
@@ -41,9 +43,12 @@ float currentTime = 0;
 const int total_points = 16;
 
 float frameTime =0 ;
+float motionFrame = 0;
 
 float startTime =0, fps=0 ;
 int totalFrames=0;
+
+float dampling = 0.9;
 
 using namespace std;
 
@@ -105,6 +110,7 @@ void OnMouseDown(int button, int s, int x, int y)
 
 void OnMouseMove(int x, int y)
 {
+    motionFrame = 0;
 	if(selected_index == -1) {
 		if (state == 0)
 			tz *= (1 + (y - oldY)/60.0f);
@@ -340,8 +346,9 @@ void DrawTable() {
 void OnRender() {
 
 	simulator.step();
-	simulator.updateCloth();
-
+    motionFrame ++;
+	simulator.updateCloth( pow(double(dampling),motionFrame) );
+    cout<<motionFrame<<endl;
 
 
 	CHECK_GL_ERROR

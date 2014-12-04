@@ -176,7 +176,7 @@ public:
         }
     }
 
-    void updateCloth()
+    void updateCloth(float dampling)
     {
         //update the cloth data
 
@@ -195,6 +195,7 @@ public:
         }
         pData->unlock();
 
+        cout << dampling <<endl;
         //update normals
         for(size_t i=0; i<indices.size(); i+=3)
         {
@@ -203,7 +204,7 @@ public:
             PxVec3 p3 = pos[indices[i+2]];
             PxVec3 n  = (p2-p1).cross(p3-p1);
 
-            normal[indices[i]]    += n;
+            normal[indices[i]]    += n*dampling;
             normal[indices[i+1]]  += n;
             normal[indices[i+2]]  += n;
         }
